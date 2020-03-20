@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="../css/main.css">
     <title>Hangman</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
 
 
 </head>
+<body>
 <div>
 
 
@@ -47,6 +49,7 @@
      </div> 
 </nav>
 <header>
+
     <img alt="Logo" src="">
 
 </header>
@@ -54,48 +57,49 @@
     <br>
     <br>
     <br> 
-<div class="container" >
+
 <div class="container jumbotron container-fluid jumbotron" >
 
 
 
+    <div class="input-group">
+
     <form class="form-signin">
         <h2 class="form-signin-heading">Bitte melde dich an</h2>
-        <label for="eingabefeldEmail" class="sr-only">Username</label>
-        <input type="email" id="eingabefeldEmail" class="form-control" placeholder="Email-Adresse" required autofocus>
-        <label for="eingabefeldPasswort" class="sr-only">Passwort</label>
-        <input type="password" id="eingabefeldPasswort" class="form-control" placeholder="Passwort" required>
+<br>
+        <label for="nickname" >Benutzername</label>
+        <input type="text" class="form-control" id="nickname" placeholder="Benutzername eingeben">
+
+<br>
+        <label for="password" >Passwort</label>
+        <input type="password" id="password" class="form-control" placeholder="Passwort eingeben" required>
+        <br>
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Anmeldung speichern
             </label>
         </div>
-
+<br>
         <!-- Großer Button Primary, der sich dem übergeordneten Element anpasst und reagiert -->
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Anmelden</button>
     </form>
 
 
-</div><!-- Container -->
-
-
-
+<!-- Container -->
 
       </div>
 </div>
+</div>
+</div>
+<br>
+<br>
 
 
 
-<footer class="fixed-bottom">
-     <div class="">
+<footer class="footer">
 
-    <h6 class="text-center">&copy; HANGMAN</h6>
-    <p class="text-center">Alica - Chanelle - Julia - Katharina</p>
-           
-   </div>
-      
-
+    <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
 </footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
