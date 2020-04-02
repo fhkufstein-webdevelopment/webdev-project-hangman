@@ -12,8 +12,11 @@ $route['/login.html'] = array('controller' => 'LoginController', 'uniqueName' =>
 $route['/logout'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 
-$route['/anmelden'] = array('controller' => 'LogoutController', 'uniqueName' => 'anmelden');
-$route['//anmelden.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'anmelden');
+$route['/game'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+$route['//game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+
+$route['/anmelden'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
+$route['//anmelden.html'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 
 //neue Route hinzufügen
 $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
