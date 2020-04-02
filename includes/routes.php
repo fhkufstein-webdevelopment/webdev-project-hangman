@@ -18,7 +18,10 @@ $route['//game.html'] = array('controller' => 'GameController', 'uniqueName' => 
 $route['/anmelden'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 $route['//anmelden.html'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 
-//neue Route hinzufügen
+//neue Route hinzufügen (für email)
 $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
+
+//neue Route für VCard
+$route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
 
