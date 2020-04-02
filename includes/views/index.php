@@ -23,7 +23,7 @@ echo $this->header;
             <tbody>
             <?php foreach($this->addresses as $address): ?>
                 <tr>
-                    <td><?php echo $address->id; ?></td>
+                    <td> <a href="adresse?id=<?php echo $address->id; ?>"><?php echo $address->id; ?></a></td>
                     <td><?php echo $address->lastname; ?></td>
                     <td><?php echo $address->firstname; ?></td>
                     <td><?php echo $address->city; ?></td>
