@@ -5,7 +5,7 @@ require_once('includes/classes/Database.php');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'webdev-project-hangman');
 define('DB_USER', 'hangmangame');
-define('DB_PASS', 'XmhiSqHGqdVJJWPm');
+define('DB_PASS', 'XmiSpqHGqdVJJWPm');
 
 
 

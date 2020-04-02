@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="de">
 
-</body>
+<head>
+    <h1> Test Footer </h1>
+</head>
+
 </html>
+
