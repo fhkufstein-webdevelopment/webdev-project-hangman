@@ -80,6 +80,8 @@ class Address extends RESTClass
 
 			AddressModel::createNewAddress($data);
 
+
+
 			$jsonResponse = new JSON();
 			$jsonResponse->result = true;
 			$jsonResponse->setMessage('Address created!');
