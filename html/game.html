@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>Hangman</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="../js/play.js"></script>
 
-    <script type="text/javascript" src="js/play.js"></script>
 
 </head>
 
@@ -58,49 +59,55 @@
     <br>
 
     <div class="container jumbotron container-fluid jumbotron" >
-        <button type="button" class="btn btn-primary btn-lg">Game starten</button>
+        <div id="countdown">01:00</div>
+        <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>
         <br>
         <br>
 
-        <button type="button" class="btn btn-info">Q</button>
-        <button type="button" class="btn btn-info">W</button>
-        <button type="button" class="btn btn-info">E</button>
-        <button type="button" class="btn btn-info">R</button>
-        <button type="button" class="btn btn-info">T</button>
-        <button type="button" class="btn btn-info">Z</button>
-        <button type="button" class="btn btn-info">U</button>
-        <button type="button" class="btn btn-info">I</button>
-        <button type="button" class="btn btn-info">O</button>
-        <button type="button" class="btn btn-info">P</button>
-        <button type="button" class="btn btn-info">Ü</button>
+        <div id="wort"></div>
+
+        <button type="button" class="btn btn-info" id = "alphabet-q">Q</button>
+        <button type="button" class="btn btn-info" id = "alphabet-w">W</button>
+        <button type="button" class="btn btn-info" id = "alphabet-e">E</button>
+        <button type="button" class="btn btn-info" id = "alphabet-r">R</button>
+        <button type="button" class="btn btn-info" id = "alphabet-t">T</button>
+        <button type="button" class="btn btn-info" id = "alphabet-z">Z</button>
+        <button type="button" class="btn btn-info" id = "alphabet-u">U</button>
+        <button type="button" class="btn btn-info" id = "alphabet-i">I</button>
+        <button type="button" class="btn btn-info" id = "alphabet-o">O</button>
+        <button type="button" class="btn btn-info" id = "alphabet-p">P</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ü">Ü</button>
         <br>
         <br>
-        <button type="button" class="btn btn-info">A</button>
-        <button type="button" class="btn btn-info">S</button>
-        <button type="button" class="btn btn-info">D</button>
-        <button type="button" class="btn btn-info">F</button>
-        <button type="button" class="btn btn-info">G</button>
-        <button type="button" class="btn btn-info">H</button>
-        <button type="button" class="btn btn-info">J</button>
-        <button type="button" class="btn btn-info">K</button>
-        <button type="button" class="btn btn-info">L</button>
-        <button type="button" class="btn btn-info">Ö</button>
-        <button type="button" class="btn btn-info">Ä</button>
+        <button type="button" class="btn btn-info" id = "alphabet-a">A</button>
+        <button type="button" class="btn btn-info" id = "alphabet-s">S</button>
+        <button type="button" class="btn btn-info" id = "alphabet-d">D</button>
+        <button type="button" class="btn btn-info" id = "alphabet-f">F</button>
+        <button type="button" class="btn btn-info" id = "alphabet-g">G</button>
+        <button type="button" class="btn btn-info" id = "alphabet-h">H</button>
+        <button type="button" class="btn btn-info" id = "alphabet-j">J</button>
+        <button type="button" class="btn btn-info" id = "alphabet-k">K</button>
+        <button type="button" class="btn btn-info" id = "alphabet-l">L</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ö">Ö</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ä">Ä</button>
         <br>
         <br>
-        <button type="button" class="btn btn-info">Y</button>
-        <button type="button" class="btn btn-info">X</button>
-        <button type="button" class="btn btn-info">C</button>
-        <button type="button" class="btn btn-info">V</button>
-        <button type="button" class="btn btn-info">B</button>
-        <button type="button" class="btn btn-info">N</button>
-        <button type="button" class="btn btn-info">M</button>
+        <button type="button" class="btn btn-info" id = "alphabet-y">Y</button>
+        <button type="button" class="btn btn-info" id = "alphabet-x">X</button>
+        <button type="button" class="btn btn-info" id = "alphabet-c">C</button>
+        <button type="button" class="btn btn-info" id = "alphabet-v">V</button>
+        <button type="button" class="btn btn-info" id = "alphabet-b">B</button>
+        <button type="button" class="btn btn-info" id = "alphabet-n">N</button>
+        <button type="button" class="btn btn-info" id = "alphabet-m">M</button>
         <br>
         <br>
+
+        <audio src="sound/fail.mp3" id="failsound"></audio>
+        <audio src="sound/rightsound.mp3" id="rightsound"></audio>
 
         <h3>Richtig</h3>
         <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+            <div id = "progress-success" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                 <span class="sr-only">40% abgeschlossen (Erfolg)</span>
             </div>
         </div>
@@ -128,6 +135,6 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+<script src="js/play.js" ></script>
 </body>
 </html>
