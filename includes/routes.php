@@ -1,4 +1,7 @@
 <?php
+// TODO: route für Highscore.html oder Highscore.php muss angelegt werden, vorher muss html oder php geklärt werden
+// TODO: weitere Routen anlegen?
+
 
 //define Routes
 $route['/'] = array('controller' => 'IndexController', 'uniqueName' => 'index');

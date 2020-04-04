@@ -1,5 +1,7 @@
 <?php
 
+// TODO: Auf Fehler kontorllieren
+
 /**
  * @author Daniel Hoover <https://github.com/danielhoover>
  */

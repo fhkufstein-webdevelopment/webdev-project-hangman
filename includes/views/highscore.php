@@ -1,4 +1,7 @@
 <?php
+
+// TODO: Auf Fehler kontrollieren z. B. Logo wird nicht angezeigt und Fußzeile wird nicht angezeigt
+
     //Datenbankverbindung
     $host = "localhost";
     $datenbank = "webdev-project-hangman";

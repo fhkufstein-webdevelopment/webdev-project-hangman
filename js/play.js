@@ -49,7 +49,7 @@ function play(){
 
 
 
-
+// TODO: Richtige Variablen für Funktion verwenden
 // Funktion für das Ende des Spiels (in etwa)
 function gameFinished(userTime) {
     //keine Ahnung
