@@ -1,6 +1,6 @@
 <?php
 
-// TODO: Auf Fehler kontorllieren
+// TODO: Auf Fehler kontrollieren
 
 /**
  * @author Daniel Hoover <https://github.com/danielhoover>
@@ -13,7 +13,7 @@ class HighscoreController extends Controller
 
 	public function run()
 	{
-		$this->view->title = "Übersicht";
+		$this->view->title = "Highscore";
 		$this->view->username = $this->user->username;
 
 		//$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
