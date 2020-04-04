@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-    <h1> Test Footer </h1>
-</head>
+<head> </head>
+
+<body>
+    <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
+</body>
 
 </html>
 

@@ -90,9 +90,6 @@ jQuery(document).ready(function() {
 
         registerModal.find('.btn-primary').prop('disabled', false);
 
-
     });
-
-
 
 });

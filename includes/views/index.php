@@ -16,6 +16,7 @@ echo $this->header;
                     <th>Name</th>
                     <th>Vorname</th>
                     <th>Ort</th>
+                    <th>E-Mail</th>
                     <th>Bearbeiten</th>
                     <th>Löschen</th>
                 </tr>
@@ -23,13 +24,22 @@ echo $this->header;
             <tbody>
             <?php foreach($this->addresses as $address): ?>
                 <tr>
+
                     <td> <a href="adresse?id=<?php echo $address->id; ?>"><?php echo $address->id; ?></a></td>
                     <td><?php echo $address->lastname; ?></td>
                     <td><?php echo $address->firstname; ?></td>
                     <td><?php echo $address->city; ?></td>
+                    <td><?php echo $address->email; ?></td> <!-- neues Feld E-Mail -->
+
+                    <!-- Button Download -->
                     <td><a href="download?id=<?php echo $address->id; ?>" class="btn btn-primary">Download</a></td>
+
+                    <!-- Button Bearbeiten -->
                     <td><button class="btn btn-default" data-toggle="modal" data-target="#editModal" data-id="<?php echo $address->id; ?>"><i class="glyphicon glyphicon-pencil"></i> Bearbeiten</button></td>
+
+                    <!-- Button Löschen -->
                     <td><a class="btn btn-danger triggerDelete" href="api/address/" data-id="<?php echo $address->id; ?>"><i class="glyphicon glyphicon-trash"></i> Löschen</a></td>
+
                 </tr>
             <?php endforeach; ?>
             </tbody>
@@ -43,7 +53,7 @@ echo $this->header;
 </div>
 
 
-
+<!-- Klick auf Button "+ neue Adresse anlegen" -> dieses Fenster öffnet sich bzw. SOLLTE SICH ÖFFNEN & WAS ANZEIGEN -->
 <div class="modal fade" tabindex="-1" role="dialog" id="editModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

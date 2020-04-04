@@ -44,3 +44,36 @@ function play(){
 //Balken richtig/falsch
 
 //einbinden in html
+
+
+
+
+
+
+// Funktion für das Ende des Spiels (in etwa)
+function gameFinished(userTime) {
+    //keine Ahnung
+
+    $.ajax({
+        'url': 'game',
+        'method': 'post',
+        'data': {'action': 'saveScore', 'time': userTime},
+        'success': function (receivedData) {
+            if(receivedData.result) {
+                //after save change url to scorebord
+                location.href = 'highscore'; //Falsche Adresse bis jetzt
+            }
+        }
+    });
+}
+
+//Läuft unser Spiel auf der Seite game mit einem GameController?
+
+
+
+
+
+
+
+
+

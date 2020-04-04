@@ -1,3 +1,29 @@
+<?php
+    //Datenbankverbindung
+    $host = "localhost";
+    $datenbank = "webdev-project-hangman";
+    $benutzer = "hangmangame";
+    $pw = "XmhiSqHGqdVJJWPm";
+
+    $connection = mysqli_connect($host, $benutzer, $pw, $datenbank);
+
+    if (!$connection) {
+        print "Keine Datenbankverbindung möglich. highscore.php";
+        die(); //Programm stoppen
+    }
+
+    if ($_POST) {
+        $benutzer = $_POST["benutzer"];
+        $zeit = $_POST["zeit"];
+
+        //Daten einfügen in Datenbank (SQL Statement)
+        $sql = "INSERT INTO tabellenname (benutzer, zeit) VALUES ('$username', '$zeit')";
+
+        //Befehl der Datenbank übermitteln
+        mysqli_query($connection, $sql);
+    }
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +36,7 @@
 
     <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../css/main.css">
+
     <title>Hangman</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
 
@@ -41,7 +68,7 @@
                         <a class="nav-link" href="start.html">Startseite </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="highscore.php">Highscore<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="highscore.html">Highscore<span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
@@ -62,7 +89,6 @@
     <br>
     <br>
 
-    <!--
     <div class="highscore_table">
         <table class="table table-striped">
             <thead>
@@ -77,25 +103,24 @@
             <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>13:00</td>
+                <td>???</td>
             </tr>
             <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>25:00</td>
+                <td>???</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
                 <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <td>02:00</td>
+                <td>???</td>
             </tr>
             </tbody>
         </table>
     </div>
-    -->
 
 
 
@@ -118,10 +143,12 @@
 
 
 
-<footer class="footer">
+<!-- <footer class="footer">
 
     <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
 </footer>
+-->
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -131,3 +158,9 @@
 </div>
 </body>
 </html>
+
+<?php
+
+echo $this->footer;
+
+?>

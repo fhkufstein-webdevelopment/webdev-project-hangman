@@ -57,6 +57,13 @@ echo $this->header;
                             <label for="name">Benutzername:</label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Benutzernamen eingeben">
                         </div>
+
+                        <!-- E-Mail hinzugefügt -->
+                        <div class="form-group">
+                            <label for="name">E-Mail:</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail eingeben">
+                        </div>
+
                         <div class="form-group">
                             <label for="pwd">Passwort (mindestens 8 Zeichen):</label>
                             <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Bitte Passwort eingeben (mind. 8 Zeichen)">
@@ -78,6 +85,7 @@ echo $this->header;
         </div>
     </div>
 </div>
+
 <?php
 
 echo $this->footer;

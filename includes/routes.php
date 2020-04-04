@@ -23,5 +23,8 @@ $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueNam
 //neue Route für VCard
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
+//neue Route für Highscore
+$route['/highscore.php'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscoreanzeige');
+
 
 
