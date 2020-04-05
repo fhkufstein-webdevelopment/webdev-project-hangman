@@ -29,5 +29,6 @@ $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueNa
 //neue Route für Highscore
 $route['/highscore.php'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscoreanzeige');
 
-
+//neue Route für User
+$route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');
 

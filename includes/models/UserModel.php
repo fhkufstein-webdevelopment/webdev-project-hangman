@@ -7,6 +7,7 @@ class UserModel
 	{
 		$db = new Database();
 		$sql = "SELECT * FROM user WHERE id=".intval($id); //Backticks wegen Schlüsselwort?  (Änderung address mit user)
+        //select * damit es alle ausgewählt werden (man muss die Felder nicht einzeln angeben)
 
 		$result = $db->query($sql);
 

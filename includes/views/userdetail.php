@@ -25,7 +25,7 @@ echo $this->header;
 
 
         <?php if($this->user->email != ''): ?> <!-- Änderung address in user -->
-            <a href="mailto:<?php echo $this->user->email; ?>" class="email"> <!-- Änderung address in user -->
+            <a href="mailto:<?php echo $this->user->email; ?>" class="email"> <!-- Änderung address in user -- mailto ist flasch -->
                 <?php echo $this->user->email; ?> <!-- Änderung address in user -->
             </a>
             <br>
