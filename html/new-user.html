@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>Hangman</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
+    <script src="../js/core2.js"></script>
 </head>
 
 <body>
@@ -68,22 +69,38 @@
                     <input type="text" class="form-control" id="lastname" placeholder="Nachname eingeben">
                 </div>
 
+                <!-- in der Zwischenzeit weg zum testen
                 <div class="form-group">
                     <label for="nicknameNew" >Benutzername</label>
                     <input type="text" class="form-control" id="nicknameNew" placeholder="Benutzername eingeben">
                 </div>
+                -->
 
+                <!-- in der zwischenzeit weg zum testen
                 <div class="form-group">
                     <label for="password" >Passwort</label>
                     <input type="password" id="password" class="form-control" placeholder="Passwort eingeben" required>
                 </div>
+                -->
 
+                <!-- in der zwischenzeit ersetzt duch nächstes label
                 <div class="form-group">
                     <label for="beispielFeldEmail1">Email-Adresse</label>
                     <input type="email" class="form-control" id="beispielFeldEmail1" placeholder="email@hangman.at">
                 </div>
+                -->
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Registrieren</button>
+                <div class="form-group">
+                    <label for="email" >E-Mail-Adresse</label>
+                    <input type="email" class="form-control" id="email" placeholder="email vl eingeben">
+                </div>
+
+                <!-- Brauchen wir id? -->
+                <button class="btn btn-lg btn-primary btn-block" type="submit" data-target="#editButton" id="wichtigerButton" data-toggle="modal">Registrieren</button>
+
+               <!-- <button class="btn btn-default" data-toggle="modal" data-target="#editModal" data-id="<?php echo $address->id; ?>">
+               <i class="glyphicon glyphicon-pencil"></i> Bearbeiten</button><
+               -->
             </form>
 
     <!-- Container -->
@@ -104,6 +121,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- unser eigenes Script -->
+<script type="text/javascript" src="core2.js"></script>
 
 </body>
 </html>

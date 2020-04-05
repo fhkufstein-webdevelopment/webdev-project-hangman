@@ -2,10 +2,11 @@
 
 class UserModel
 {
-	public static function getAddressById($id)
+    //alt: getAddressById
+	public static function getUserById($id)
 	{
 		$db = new Database();
-		$sql = "SELECT * FROM user WHERE id=".intval($id);
+		$sql = "SELECT * FROM user WHERE id=".intval($id); //Backticks wegen Schlüsselwort?  (Änderung address mit user)
 
 		$result = $db->query($sql);
 
@@ -17,7 +18,8 @@ class UserModel
 		return null;
 	}
 
-	public static function getAddressesByUserId($userId)
+	//warum ist funktionsname grau? alt: getAddressesByUserId
+	public static function getUsersByUserId($userId) //Backticks wegen Schlüsselwort?  (Änderung address mit user)
 	{
 		$db = new Database();
 
@@ -41,9 +43,11 @@ class UserModel
 
 	public static function createNewUser($data)
 	{
-		$db = new Database();
-        $sql = "INSERT INTO user(userId,firstname,lastname,nicknameNew,password,beispielfeldEmail) VALUES('".$db->escapeString($data['userId'])."','".$db->escapeString($data['firstname'])."','".$db->escapeString($data['lastname'])."','".$db->escapeString($data['nicknameNew'])."','".$db->escapeString($data['password'])."','".$db->escapeString($data['beispieldFeldEmail1'])."')";
-		$db->query($sql);
+		$db = new Database(); //user testweise in backticks
+        $sql = "INSERT INTO user(userId,firstname,lastname,email) VALUES('".$db->escapeString($data['userId'])."','".$db->escapeString($data['firstname'])."','".$db->escapeString($data['lastname'])."','".$db->escapeString($data['email'])."')";
+		//später einfügen: nicknameNew,password,beispielfeldEmail
+        //später einfügen2: ,'".$db->escapeString($data['nicknameNew'])."','".$db->escapeString($data['password'])."','".$db->escapeString($data['beispieldFeldEmail1'])."'
+        $db->query($sql);
 
 		$data['id'] = $db->insertId();
 
@@ -52,19 +56,24 @@ class UserModel
 
 	public static function saveUser($data)
 	{
-		$db = new Database();
-        $sql = "UPDATE user SET firstname='". $db->escapeString($data['firstname'])."'',lastname='".$db->escapeString($data['lastname'])."''',nicknameNew='".$db->escapeString($data['nicknameNew'])."',password='".$db->escapeString($data['password'])."',beispielFeldEmail1='".$db->escapeString($data['beispielFeldEmail1'])."' WHERE id=".intval($data['id']);
+		$db = new Database(); //user testweise in backticks
 
+        //das untenstehende $sgl zeile 60 beinhaltet wahrscheinlich fehler
+        //$sql = "UPDATE user SET firstname='". $db->escapeString($data['firstname'])."'',lastname='".$db->escapeString($data['lastname'])."''',nicknameNew='".$db->escapeString($data['nicknameNew'])."',password='".$db->escapeString($data['password'])."',beispielFeldEmail1='".$db->escapeString($data['beispielFeldEmail1'])."' WHERE id=".intval($data['id']);
+
+        //dieses $sql muss später angepasst/erweitert werden
+        $sql = "UPDATE user SET firstname='".$db->escapeString($data['firstname'])."',lastname='".$db->escapeString($data['lastname'])."',email='".$db->escapeString($data['email'])."' WHERE id=".intval($data['id']);
 
 		$db->query($sql);
 
 		return (object) $data;
 	}
 
-	public static function deleteUser($id)
+	public static function deleteUser($id) //warum ist diese funktion grau?
 	{
 		$db = new Database();
 
+		//test user in backticks
 		$sql = "DELETE FROM user WHERE id=".intval($id);
 		$db->query($sql);
 	}

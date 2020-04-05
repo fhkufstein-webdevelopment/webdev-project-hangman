@@ -18,14 +18,14 @@ class User extends RESTClass
 	{
 		if(isset($data['returnView']) && $data['returnView'])
 		{
-			$view = new View('user');
+			$view = new View('user'); //Änderung viewName
 
 			if(isset($data['id']))
 			{
-				$dataForView = UserModel::getAddressById($data['id']);
+				$dataForView = UserModel::getUserById($data['id']); //passt getAddressById? nein, weil in UserModel ausgebessert
 				$user = new User();
 
-				if($dataForView->userId = $user->id)
+				if($dataForView->userId = $user->id) //user auch bei Address.php hier
 				{
 					//ok - its your address!
 
@@ -59,7 +59,9 @@ class User extends RESTClass
 
 	protected function createRequest($data)
 	{
-		$requiredFields = array('firstname', 'lastname', 'nickNameNew', 'password', 'BeispielFeldEmail1');
+	    //später hinzufügen: 'nickNameNew', 'password', 'BeispielFeldEmail1'
+		$requiredFields = array('firstname', 'lastname', 'email');
+
 
 		$error = false;
 		$errorFields = array();
@@ -99,7 +101,8 @@ class User extends RESTClass
 
 	protected function saveRequest($data)
 	{
-		$requiredFields = array('firstname', 'lastname', 'nickNameNew', 'password', 'BeispielFeldEmail1');
+	    //später hinzufügen: 'nickNameNew', 'password', 'BeispielFeldEmail1'
+		$requiredFields = array('firstname', 'lastname', 'email');
 
 		$error = false;
 		$errorFields = array();

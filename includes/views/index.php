@@ -53,7 +53,7 @@ echo $this->header;
 </div>
 
 
-<!-- Klick auf Button "+ neue Adresse anlegen" -> dieses Fenster öffnet sich bzw. SOLLTE SICH ÖFFNEN & WAS ANZEIGEN -->
+<!-- Klick auf Button "+ neue Adresse anlegen" -> dieses Fenster öffnet sich -->
 <div class="modal fade" tabindex="-1" role="dialog" id="editModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
