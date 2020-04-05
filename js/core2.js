@@ -1,4 +1,4 @@
-//Dateiname: core2.js
+
 
 /* Das alleine reicht irgendwie nicht
 var registrierenButton = $('#btn btn-lg btn-primary btn-block');
@@ -13,14 +13,15 @@ registrierenButton.find('.btn btn-lg btn-primary btn-clock').click(function () {
     so the following line would be
     $(document).ready(function() { */
 
+
 jQuery(document).ready(function() {
 
     var editButton = $('#editButton'); //Änderung editButton
 
     editButton.on('show.bs.modal', function (event) { //stimmt das so? ohne Veränderung außer editButton
 
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var addressId = button.data('id') // Extract info from data-* attributes
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var addressId = button.data('id'); // Extract info from data-* attributes
 
         var that = this;
 
@@ -52,7 +53,7 @@ jQuery(document).ready(function() {
             'success': function(receivedData) {
 
                 if(receivedData.result) {
-                    var modal = $(that)
+                    var modal = $(that);
                     modal.find('.input-group').html(receivedData.data.html); //alt: .modal-body
                     editBuddon.find('.btn btn-lg btn-primary btn-clock').prop('disabled', false); //alt: .btn-primary
                 } else { //there was an error - do something!
@@ -66,9 +67,10 @@ jQuery(document).ready(function() {
     });
 
     //Hinzufügen Event oder --> neue Funktion sieh bisschen weiter unten?
-    editModal.find('.btn-primary').click(function() {
+
+    /*editModal.find('.btn-primary').click(function() {
         editModal.find('form').trigger('submit', [this]);
-    });
+    });*/
 
 
     //wie heißt unser registrieren button? die class brauchen wir
@@ -80,7 +82,7 @@ jQuery(document).ready(function() {
     //die funktion von oben umschreiben
     editButton.find('.btn btn-lg btn-primary btn-block.find').click(function () {
         editButton.find('form').trigger('submit', [this]); //woher kommen form und woher kommt submit
-    })
+    });
 
 
     //wenns funktioniert super
@@ -88,6 +90,7 @@ jQuery(document).ready(function() {
     //funktioniert es nicht, langsam von oben herunter alles anpassen
 
 
+    /*
 
     $('.triggerDelete').click(function(e) {
         e.preventDefault();
@@ -112,5 +115,9 @@ jQuery(document).ready(function() {
             });
         }
     });
+ */
 
 });
+
+
+
