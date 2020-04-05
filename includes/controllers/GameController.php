@@ -6,7 +6,7 @@ class GameController extends Controller
 {
     //Anleitung Schritt 4
     protected $viewFileName = "game"; //Das ist der View, der die Daten bekommt
-    protected $loginRequired = true;
+    protected $loginRequired = true; //$loginRequired ist auf true gesetzt, da wir nur den Leuten den Download erlauben wollen die überhaupt angemeldet sind.
 
 
 
