@@ -1,19 +1,16 @@
 var words = ['Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','Telekommunikationsüberwachungsverordnung'];
-
-
-function zufallszahl(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
+var word = words[Math.floor(Math.random() * words.length)];
 
 if(document.getElementById("startbutton").innerHTML("onclick")){
     gamestarten();
+    zeit();
+    play();
 }
 
 
 function gamestarten(){
-    words[zufallszahl(0 , words.length - 1)];
-    document.getElementById(wort).innerHTML = print(words);
+
+    document.getElementById(wort).innerHTML = print(word);
     doument.getElementById("countdown").innerHTML = zeit();
 }
 
@@ -31,19 +28,43 @@ function zeit(){
 }
 
 function play(){
-    var buchstabe;
-    if(buchstabe = indexOf.words){
-        document.getElementById("rightsound").play();
-    }else{
-        document.getElementById("failsound").play();
+    var answer = [];
+    for(var i = 0; i< word.length; i++){
+        answer[i] = ""; //einzelne buchstaben in array speichern
     }
+
+    var letters = word.length;
+
+    while (letters > 0) {
+        alert(answer.join(" "));
+
+        var guess = prompt("Rate einen Buchstaben"); //Eingabefeld
+        if (guess == null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert("Bitte gib einen einzelnen Buchstaben ein oder klicke auf den Button.");
+        } else {
+            for (var j = 0; j < word.length; j++) {
+                if (word[j] === guess) {
+                    answer[j] = guess;
+                    letters--;
+                    document.getElementById("rightsound").play();
+                }else{
+                    document.getElementById("failsound").play();
+                }
+            }
+        }
+
+        alert(answer.join(" "));
+        alert("Gratuliere das Wort lautet " + word);
+    }
+
+
+
 }
 
-//wie handhaben mit buchstaben?
+// Balken richtig falsch
 
-//Balken richtig/falsch
-
-//einbinden in html
 
 
 
