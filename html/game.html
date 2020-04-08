@@ -16,6 +16,7 @@
     <script src="../js/game.js"></script>
 
 
+
 </head>
 
 
@@ -62,66 +63,55 @@
     <div class="container jumbotron container-fluid jumbotron" >
         <div id="countdown">01:00</div>
         <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>
-        <button onclick="abc()">Click me</button>
         <br>
         <br>
 
-        <div id="wort"></div>
-
-        <button type="button" class="btn btn-info" id = "alphabet-q">Q</button>
-        <button type="button" class="btn btn-info" id = "alphabet-w">W</button>
-        <button type="button" class="btn btn-info" id = "alphabet-e">E</button>
-        <button type="button" class="btn btn-info" id = "alphabet-r">R</button>
-        <button type="button" class="btn btn-info" id = "alphabet-t">T</button>
-        <button type="button" class="btn btn-info" id = "alphabet-z">Z</button>
-        <button type="button" class="btn btn-info" id = "alphabet-u">U</button>
-        <button type="button" class="btn btn-info" id = "alphabet-i">I</button>
-        <button type="button" class="btn btn-info" id = "alphabet-o">O</button>
-        <button type="button" class="btn btn-info" id = "alphabet-p">P</button>
-        <button type="button" class="btn btn-info" id = "alphabet-ü">Ü</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-info" id = "alphabet-a">A</button>
-        <button type="button" class="btn btn-info" id = "alphabet-s">S</button>
-        <button type="button" class="btn btn-info" id = "alphabet-d">D</button>
-        <button type="button" class="btn btn-info" id = "alphabet-f">F</button>
-        <button type="button" class="btn btn-info" id = "alphabet-g">G</button>
-        <button type="button" class="btn btn-info" id = "alphabet-h">H</button>
-        <button type="button" class="btn btn-info" id = "alphabet-j">J</button>
-        <button type="button" class="btn btn-info" id = "alphabet-k">K</button>
-        <button type="button" class="btn btn-info" id = "alphabet-l">L</button>
-        <button type="button" class="btn btn-info" id = "alphabet-ö">Ö</button>
-        <button type="button" class="btn btn-info" id = "alphabet-ä">Ä</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-info" id = "alphabet-y">Y</button>
-        <button type="button" class="btn btn-info" id = "alphabet-x">X</button>
-        <button type="button" class="btn btn-info" id = "alphabet-c">C</button>
-        <button type="button" class="btn btn-info" id = "alphabet-v">V</button>
-        <button type="button" class="btn btn-info" id = "alphabet-b">B</button>
-        <button type="button" class="btn btn-info" id = "alphabet-n">N</button>
-        <button type="button" class="btn btn-info" id = "alphabet-m">M</button>
-        <br>
-        <br>
-
-        <audio src="sound/fail.mp3" id="failsound"></audio>
-        <audio src="sound/rightsound.mp3" id="rightsound"></audio>
-
-        <h3>Richtig</h3>
-        <div class="progress">
-            <div id = "progress-success" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <span class="sr-only">40% abgeschlossen (Erfolg)</span>
-            </div>
+        <div id="wort">
+            <p id="ausgabe"></p>
         </div>
 
+        <button type="button" class="btn btn-info" id = "alphabet-q" onclick="play('q')">Q</button>
+        <button type="button" class="btn btn-info" id = "alphabet-w" onclick="play('w')">W</button>
+        <button type="button" class="btn btn-info" id = "alphabet-e" onclick="play('e')">E</button>
+        <button type="button" class="btn btn-info" id = "alphabet-r" onclick="play('r')">R</button>
+        <button type="button" class="btn btn-info" id = "alphabet-t" onclick="play('t')">T</button>
+        <button type="button" class="btn btn-info" id = "alphabet-z" onclick="play('z')">Z</button>
+        <button type="button" class="btn btn-info" id = "alphabet-u" onclick="play('u')">U</button>
+        <button type="button" class="btn btn-info" id = "alphabet-i" onclick="play('i')">I</button>
+        <button type="button" class="btn btn-info" id = "alphabet-o" onclick="play('o')">O</button>
+        <button type="button" class="btn btn-info" id = "alphabet-p" onclick="play('p')">P</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ü" onclick="play('ü')">Ü</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-info" id = "alphabet-a" onclick="play('a')">A</button>
+        <button type="button" class="btn btn-info" id = "alphabet-s" onclick="play('s')">S</button>
+        <button type="button" class="btn btn-info" id = "alphabet-d" onclick="play('d')">D</button>
+        <button type="button" class="btn btn-info" id = "alphabet-f" onclick="play('f')">F</button>
+        <button type="button" class="btn btn-info" id = "alphabet-g" onclick="play('g')">G</button>
+        <button type="button" class="btn btn-info" id = "alphabet-h" onclick="play('h')">H</button>
+        <button type="button" class="btn btn-info" id = "alphabet-j" onclick="play('j')">J</button>
+        <button type="button" class="btn btn-info" id = "alphabet-k" onclick="play('k')">K</button>
+        <button type="button" class="btn btn-info" id = "alphabet-l" onclick="play('l')">L</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ö" onclick="play('ö')">Ö</button>
+        <button type="button" class="btn btn-info" id = "alphabet-ä" onclick="play('ä')">Ä</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-info" id = "alphabet-y" onclick="play('y')">Y</button>
+        <button type="button" class="btn btn-info" id = "alphabet-x" onclick="play('x')">X</button>
+        <button type="button" class="btn btn-info" id = "alphabet-c" onclick="play('c')">C</button>
+        <button type="button" class="btn btn-info" id = "alphabet-v" onclick="play('v')">V</button>
+        <button type="button" class="btn btn-info" id = "alphabet-b" onclick="play('b')">B</button>
+        <button type="button" class="btn btn-info" id = "alphabet-n" onclick="play('n')">N</button>
+        <button type="button" class="btn btn-info" id = "alphabet-m" onclick="play('m')">M</button>
+        <br>
         <br>
 
-        <h3>Falsch</h3>
-        <div class="progress">
-            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="sr-only">80% abgeschlossen (Gefahr)</span>
-            </div>
-        </div>
+        <audio src="../sound/fail.mp3" id="failsound"></audio>
+        <audio src="../sound/rightsound.mp3" id="rightsound"></audio>
+
+        <div id="blume">
+            <img src="../pics/logo_klein.png"/></div>
+            <!-- video tag hidden und dann visible-->
     </div>
 </div>
 
@@ -138,7 +128,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<script src="js/play.js" ></script>
 
 <!-- für Highscore Tabelle -> ist villeicht richtig -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

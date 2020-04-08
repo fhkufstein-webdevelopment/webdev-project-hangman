@@ -1,37 +1,67 @@
 var words = ['Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','Telekommunikationsüberwachungsverordnung'];
 var word = words[Math.floor(Math.random() * words.length)];
 
-if(document.getElementById("startbutton").innerHTML("onclick")){
-    gamestarten();
-    zeit();
-    play();
+
+
+let maxAmountOfTime = 60; //let = Variable
+document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen ist
+
+    document.getElementById("startbutton").addEventListener("click",function () {
+        setInterval(timer,1000);
+    })
+});
+
+
+
+let timer = function zeit(){
+    maxAmountOfTime--;
+    if(maxAmountOfTime > 10){
+        document.getElementById("countdown").innerHTML = "00:"+maxAmountOfTime;
+    }else if (maxAmountOfTime<10 && maxAmountOfTime>=0){
+        document.getElementById("countdown").style.color = "red";
+        document.getElementById("countdown").innerHTML = "00:"+"0"+maxAmountOfTime;
+    }else {
+        timeTout();
+    }
+};
+
+
+function timeTout() {
+    clearInterval(timer);
 }
 
-function abc () {
-    gamestarten();
-    zeit();
-    play();
+
+function play(buchstabe){
+
+    var answer = [];
+    for(var i = 0; i< word.length; i++){
+
+        if(buchstabe == word[i]){
+
+            answer[i] = buchstabe;
+            alert (answer);
+        }
+
+        checkIfComplete();
+    }
+
 }
-function gamestarten(){
 
-    document.getElementById(wort).innerHTML = alert(word);
-    document.getElementById("countdown").innerHTML = zeit();
-}
-
-function zeit(){
-    var minuten = 1;
-    var sekunden = 59;
-    minuten--;
-    sekunden--;
-
-    if(minuten == 0)document.getElementById("countdown").innerHTML = "00:"+sekunden;
-    else if(sekunden<10){
-        document.getElementById("countdown").innerHTML = "00:0"+sekunden;
-        document.getElementById("countdown").style.color = red;
+function checkIfComplete() {
+    let richtig = 0;
+    for (var i = 0; i<word.length;i++){
+        if(answer[i] == word[i]){
+            richtig++;
+        }
+    }
+    if(richtig == word.length){
+        alert("spiel fertig");
     }
 }
 
-function play(){
+
+/*function play(buchstabe){
+
     var answer = [];
     for(var i = 0; i< word.length; i++){
         answer[i] = ""; //einzelne buchstaben in array speichern
@@ -40,13 +70,13 @@ function play(){
     var letters = word.length;
 
     while (letters > 0) {
-        alert(answer.join(" "));
+        document.getElementById("ausgabe").innerHTML = answer.join(" ");
 
-        var guess = prompt("Rate einen Buchstaben"); //Eingabefeld
+        var guess = buchstabe ;
         if (guess == null) {
             break;
         } else if (guess.length !== 1) {
-            alert("Bitte gib einen einzelnen Buchstaben ein oder klicke auf den Button.");
+            document.getElementById("ausgabe").innerHTML = "Bitte gib einen einzelnen Buchstaben ein oder klicke auf den Button.";
         } else {
             for (var j = 0; j < word.length; j++) {
                 if (word[j] === guess) {
@@ -55,23 +85,18 @@ function play(){
                     document.getElementById("rightsound").play();
                 }else{
                     document.getElementById("failsound").play();
+                    document.getElementById("blume").src = "webdev-project-hangman/pics/b_fehler1" +".png";
                 }
             }
         }
 
-        alert(answer.join(" "));
-        alert("Gratuliere das Wort lautet " + word);
+
     }
+    document.getElementById("ausgabe").innerHTML = answer.join(" ");
+    document.getElementById("Gratuliere! Das Wort lautet " + word);
 
 
-
-}
-
-// Balken richtig falsch
-
-
-
-
+}*/
 
 
 // TODO: Richtige Variablen für Funktion verwenden
