@@ -32,3 +32,6 @@ $route['/highscore.php'] = array('controller' => 'HighscoreController', 'uniqueN
 //neue Route für User
 $route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');
 
+//neue Route für Start
+$route['/start'] = array('controller' => 'StartController', 'uniqueName' => 'start');
+

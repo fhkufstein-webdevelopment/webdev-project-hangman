@@ -54,7 +54,7 @@ echo $this->header;
                     <form method="post" action="login" class="col-xs-12">
 
                         <div class="form-group">
-                            <label for="name">Benutzername:</label>
+                            <label for="name">Benutzername/Nickname:</label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Benutzernamen eingeben">
                         </div>
 

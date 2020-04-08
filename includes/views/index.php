@@ -3,6 +3,11 @@
 echo $this->header;
 
 ?>
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
 <div id="main">
     <div class="row">
 
@@ -17,6 +22,7 @@ echo $this->header;
                     <th>Vorname</th>
                     <th>Ort</th>
                     <th>E-Mail</th>
+                    <th>Download</th>
                     <th>Bearbeiten</th>
                     <th>Löschen</th>
                 </tr>
@@ -42,6 +48,9 @@ echo $this->header;
 
                 </tr>
             <?php endforeach; ?>
+
+            <a href="start.php">Start php </a>
+
             </tbody>
         </table>
         <?php else: ?>
@@ -71,7 +80,7 @@ echo $this->header;
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+</body>
 
 <?php
 
