@@ -49,7 +49,7 @@ echo $this->header;
                 </tr>
             <?php endforeach; ?>
 
-            <a href="start.php">Start php </a>
+            <a href="start">Start php </a>
 
             </tbody>
         </table>

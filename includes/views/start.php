@@ -58,9 +58,26 @@ echo $this->header;
                     <div class="col-12 text-center">
                         <h1 class="font-weight-light">HANGMAN</h1>
                         <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+
+
+                        <!-- Button funktioniert-->
+                        <a href="../webdev-project-hangman/html/game.html"><button>Zum Game!</button></a>
+
+                        <!--
+                        <button type="button2" href="../html/game.html">
+                            Game öffnen
+                        </button>
+
+                        <button>
+                            <input class=“ButtonClass“ type=“button“ value=“Hier wird geklickt“ onklick=“www.google.at“/>
+                            Button 3
+                        </button>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
                             Zum Game
                         </button>
+                        -->
+
                     </div>
                 </div>
             </div>
@@ -77,7 +94,9 @@ echo $this->header;
 
                  <!--Modal-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+
+
+                   <!-- <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Anmeldung zum Game</h5>
@@ -106,8 +125,9 @@ echo $this->header;
                                         </label>
                                     </div>
                                     <br>
-                                     <!--Großer Button Primary, der sich dem übergeordneten Element anpasst und reagiert-->
+                                     Großer Button Primary, der sich dem übergeordneten Element anpasst und reagiert
                                 </form>
+
 
                             </div>
 
@@ -119,7 +139,7 @@ echo $this->header;
                         </div>
                     </div>
                 </div>
-    </div>
+    </div> -->
 
 
     <!-- weg, sonst is doppelt da
