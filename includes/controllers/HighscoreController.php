@@ -7,7 +7,7 @@
  */
 class HighscoreController extends Controller
 {
-	protected $viewFileName = "highscoreanzeige"; //this will be the View that gets the data...
+	protected $viewFileName = "highscore"; //this will be the View that gets the data...
 	protected $loginRequired = true;
 
 
