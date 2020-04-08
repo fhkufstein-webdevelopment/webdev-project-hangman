@@ -7,11 +7,15 @@ if(document.getElementById("startbutton").innerHTML("onclick")){
     play();
 }
 
-
+function abc () {
+    gamestarten();
+    zeit();
+    play();
+}
 function gamestarten(){
 
-    document.getElementById(wort).innerHTML = print(word);
-    doument.getElementById("countdown").innerHTML = zeit();
+    document.getElementById(wort).innerHTML = alert(word);
+    document.getElementById("countdown").innerHTML = zeit();
 }
 
 function zeit(){
