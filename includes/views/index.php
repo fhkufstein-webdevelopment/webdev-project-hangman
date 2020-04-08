@@ -14,6 +14,18 @@ echo $this->header;
         <button class="btn btn-primary" data-toggle="modal" data-target="#editModal"><i class="glyphicon glyphicon-plus"></i> Neue Adresse anlegen</button>
 
         <?php if($this->addresses): ?>
+
+
+
+        <!-- von parts/header hierher platziert -->
+            <div class="logo">
+                <div class="name">Meine hinterlegten Adressen</div> <!-- Addressverwaltung -->
+                <div class="version">1.0</div>
+            </div>
+
+
+
+
         <table class="table table-striped">
             <thead>
                 <tr>

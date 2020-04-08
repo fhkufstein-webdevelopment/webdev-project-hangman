@@ -32,10 +32,13 @@
 <body>
 <header>
     <div class="inner">
+
+        <!--
         <div class="logo">
-            <div class="name">Meine hinterlegten Adressen</div> <!-- Addressverwaltung -->
+            <div class="name">Meine hinterlegten Adressen</div> < !-- Addressverwaltung -- >
             <div class="version">1.0</div>
         </div>
+        -->
 
         <?php if(LOGGED_IN == true): ?>
             <nav class="navbar navbar-default">
@@ -72,6 +75,40 @@
                 </ul>
             </nav>
         <?php endif; ?>
+
+<!-- aus html kopiert -->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
+
+                <img src="../pics/logo.png"/>
+                <!-- Logo einfügen -->
+
+                <div class="container">
+                    <a class="navbar-brand" href="start.html">Hangman Game</a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="start.html">Startseite <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../includes/views/highscore.php">Highscore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="new-user.html">Registrierung</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+<!-- Aus html kopiert Ende -->
+
+
 
     </div>
 </header>
