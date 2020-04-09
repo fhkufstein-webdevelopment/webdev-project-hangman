@@ -1,5 +1,5 @@
-var words = ['Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','Telekommunikationsüberwachungsverordnung'];
-var word = words[Math.floor(Math.random() * words.length)];
+let words = ['Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','Telekommunikationsüberwachungsverordnung'];
+let word = words[Math.floor(Math.random() * words.length)];
 
 
 
@@ -33,7 +33,7 @@ function timeTout() {
 
 function play(buchstabe){
 
-    var answer = [];
+    let answer = [];
     for(var i = 0; i< word.length; i++){
 
         if(buchstabe == word[i]){
@@ -49,9 +49,14 @@ function play(buchstabe){
 
 function checkIfComplete() {
     let richtig = 0;
-    for (var i = 0; i<word.length;i++){
+    let falsch = 0;
+    for (let i = 0; i<word.length;i++){
         if(answer[i] == word[i]){
             richtig++;
+        }else{
+            document.getElementById("blume").src = "b_fehler1" + ".png";
+            falsch++;
+
         }
     }
     if(richtig == word.length){
@@ -60,43 +65,6 @@ function checkIfComplete() {
 }
 
 
-/*function play(buchstabe){
-
-    var answer = [];
-    for(var i = 0; i< word.length; i++){
-        answer[i] = ""; //einzelne buchstaben in array speichern
-    }
-
-    var letters = word.length;
-
-    while (letters > 0) {
-        document.getElementById("ausgabe").innerHTML = answer.join(" ");
-
-        var guess = buchstabe ;
-        if (guess == null) {
-            break;
-        } else if (guess.length !== 1) {
-            document.getElementById("ausgabe").innerHTML = "Bitte gib einen einzelnen Buchstaben ein oder klicke auf den Button.";
-        } else {
-            for (var j = 0; j < word.length; j++) {
-                if (word[j] === guess) {
-                    answer[j] = guess;
-                    letters--;
-                    document.getElementById("rightsound").play();
-                }else{
-                    document.getElementById("failsound").play();
-                    document.getElementById("blume").src = "webdev-project-hangman/pics/b_fehler1" +".png";
-                }
-            }
-        }
-
-
-    }
-    document.getElementById("ausgabe").innerHTML = answer.join(" ");
-    document.getElementById("Gratuliere! Das Wort lautet " + word);
-
-
-}*/
 
 
 // TODO: Richtige Variablen für Funktion verwenden
@@ -117,7 +85,6 @@ function gameFinished(userTime) {
     });
 }
 
-//Läuft unser Spiel auf der Seite game mit einem GameController?
 
 
 
