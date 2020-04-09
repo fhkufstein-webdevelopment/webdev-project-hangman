@@ -1,83 +1,86 @@
-let words = ['grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','telekommunikationsüberwachungsverordnung'];
-let word = words[Math.floor(Math.random() * words.length)];
 
+var words = ['wort','hase'];
+var word = words[Math.floor(Math.random() * words.length)];
 
-
+let startButton;
+let startTimer;
 let maxAmountOfTime = 60;
 document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen ist
-
-    document.getElementById("startbutton").addEventListener("click",function () {
-        setInterval(timer,1000);
-    })
-
-    document.getElementById("wort").style
-
+    startButton = document.getElementById("startbutton");
+    startButton.addEventListener("click",function () {
+        startTimer = setInterval(time,1000);
+        startAllItems();
+    });
 });
 
-
-
-let timer = function zeit(){
+function time(){
     maxAmountOfTime--;
     if(maxAmountOfTime > 10){
         document.getElementById("countdown").innerHTML = "00:"+maxAmountOfTime;
     }else if (maxAmountOfTime<10 && maxAmountOfTime>=0){
         document.getElementById("countdown").style.color = "red";
         document.getElementById("countdown").innerHTML = "00:"+"0"+maxAmountOfTime;
-    }else {
-        timeTout();
+    }else if (maxAmountOfTime < 0) {
+        gameComplete(false);
+        maxAmountOfTime = 60;
+        clearInterval(startTimer);
     }
 };
-
+function startAllItems() {
+    startTimer;
+}
 
 function timeTout() {
-    clearInterval(timer);
+    clearInterval(startTimer);
 }
 
-
-let fehler = 0;
-let answer = [];
-
-function play(buchstabe){
-
-    for(var i = 0; i< word.length; i++){
-
-        if(buchstabe == word[i]){
-
-            answer[i] = buchstabe;
-            document.getElementById("ausgabe").innerHTML = answer;
-
-            if(fehler != 0){
-                fehler--;
-            }else if(document.getElementById("blume").src == "../pics/b_voll.png"){
-                document.getElementById("animation").style.visibility = "visible";
-                document.getElementById("blume").style.visibility = "hidden";
-            }
-            document.getElementById("blume").src = "../pics/b_fehler" + fehler + ".png";
-        }else{
-            fehler++;
-            document.getElementById("blume").src = "../pics/b_fehler" + fehler + ".png";
-        }
-
-        checkIfComplete();
-    }
-
-}
 
 function checkIfComplete() {
     let richtig = 0;
-    for (let i = 0; i<word.length;i++){
+    for (var i = 0; i<word.length;i++){
         if(answer[i] == word[i]){
             richtig++;
         }
     }
     if(richtig == word.length){
-        alert("spiel fertig");
-        timeTout();
+        gameComplete(true);
+    }
+}
+
+let letterCount = 0;
+let answer = [];
+function play(letter){
+    for(var i = 0; i< word.length; i++){
+        if(letter == word[i].toLowerCase()){
+            answer[i] = letter;
+            printWordsOut();
+        }
+        checkIfComplete();
     }
 }
 
 
+function printWordsOut(){
+    letterCount = 0;
+    document.getElementById("ausgabe").innerHTML = "";
+    for(let i = 0; i < answer.length;i++){
+        if(answer[i] == null){
+            document.getElementById("ausgabe").innerHTML += " ";
+        }else{
+            document.getElementById("ausgabe").innerHTML += answer[i];
+            letterCount++;
+        }
+    }
+}
 
+function gameComplete(status) {
+    clearInterval(startTimer);
+    if(status == true){
+        alert("You won the Game");
+    }else {
+        alert("You lost the Game");
+    }
+}
 
 // TODO: Richtige Variablen für Funktion verwenden
 // Funktion für das Ende des Spiels (in etwa)
@@ -91,12 +94,13 @@ function gameFinished(userTime) {
         'success': function (receivedData) {
             if(receivedData.result) {
                 //after save change url to scorebord
-                location.href = 'highscore'; //Falsche Adresse bis jetzt
+                location.href = '../html/highscore.html'; //Falsche Adresse bis jetzt
             }
         }
     });
 }
 
+//Läuft unser Spiel auf der Seite game mit einem GameController?
 
 
 

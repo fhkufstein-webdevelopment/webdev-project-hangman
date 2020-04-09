@@ -1,6 +1,5 @@
 #wort{
     min-width: 400px;
-    background-color: fuchsia;
     height: 100px;
     font-size: 16pt;
     text-transform: uppercase;
@@ -24,4 +23,8 @@
     float:right;
     width: 250px;
     padding-top: 30px;
+}
+
+#highscore{
+    visibility: hidden;
 }
