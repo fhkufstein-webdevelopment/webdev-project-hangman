@@ -61,7 +61,7 @@ echo $this->header;
                 </tr>
             <?php endforeach; ?>
 
-            <a href="start">Start php </a>
+            <a href="start">Wenn du eine Adresse hinzugefüht hast, geht es hier weiter</a>
 
             </tbody>
         </table>

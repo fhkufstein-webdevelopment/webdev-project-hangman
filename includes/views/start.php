@@ -29,7 +29,7 @@ echo $this->header;
             <!-- Logo einfügen -->
 
             <div class="container">
-                <a class="navbar-brand" href="start.html">Hangman Game</a>
+                <a class="navbar-brand" href="webdev-project-hangman/../html/game.html">Hangman Game</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,13 +38,13 @@ echo $this->header;
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="start.html">Startseite <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="webdev-project-hangman/../html/game.html">Startseite <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../includes/views/highscore.php">Highscore</a>
+                            <a class="nav-link" href="highscore">Highscore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="new-user.html">Registrierung</a>
+                            <a class="nav-link" href="login">Registrierung</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@ echo $this->header;
                 <div class="row h-100 align-items-center">
                     <div class="col-12 text-center">
                         <h1 class="font-weight-light">HANGMAN</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+                        <p class="lead"> Damit es netter wirkt, könnte man hier die Spielregeln hineinschreiben? Viel Spaß beim Spieln</p>
 
 
                         <!-- Button funktioniert-->

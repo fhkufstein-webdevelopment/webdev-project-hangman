@@ -18,9 +18,10 @@
     if ($_POST) {
         $benutzer = $_POST["benutzer"];
         $zeit = $_POST["zeit"];
+        $datum = $_POST["datum"];
 
         //Daten einfügen in Datenbank (SQL Statement)
-        $sql = "INSERT INTO tabellenname (benutzer, zeit) VALUES ('$username', '$zeit')";
+        $sql = "INSERT INTO tabellenname (benutzer, zeit, datum ) VALUES ('$benutzer', '$zeit', '$datum')";
 
         //Befehl der Datenbank übermitteln
         mysqli_query($connection, $sql);
@@ -60,7 +61,7 @@
         <!-- Logo einfügen -->
 
         <div class="container">
-            <a class="navbar-brand" href="start.html">Hangman Game</a>
+            <a class="navbar-brand" href="start">Hangman Game</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,18 +69,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a class="nav-link" href="start.html">Startseite </a>
+                        <a class="nav-link" href="html/game.html">Startseite </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="highscore.html">Highscore<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="highscore">Highscore<span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="new-user.html">Anmelden</a>
+                        <a class="nav-link" href="login">Anmelden</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="new-user.html">Registrierung</a>
+                        <a class="nav-link" href="login">Registrierung</a>
                     </li>
 
                 </ul>
@@ -99,6 +100,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Zeit</th>
+                <th scope="col">Datum</th>
                 <th scope="col">brauchen wir noch?</th>
             </tr>
             </thead>
