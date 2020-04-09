@@ -64,15 +64,23 @@
     <br>
     <br>
 
+
+
+
     <div class="container jumbotron container-fluid jumbotron" >
         <div id="countdown">01:00</div>
+
+        <div>
+            <!-- video tag hidden und dann visible-->
+            <img src="../pics/b_voll.png" id = "blume">
+            <video src="../pics/logo.mp4" id = "animation"></video>
+        </div>
+
         <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>
         <br>
         <br>
 
-        <div id="wort">
-            <p id="ausgabe"></p>
-        </div>
+
 
         <button type="button" class="btn btn-info" id = "alphabet-q" onclick="play('q')">Q</button>
         <button type="button" class="btn btn-info" id = "alphabet-w" onclick="play('w')">W</button>
@@ -113,10 +121,11 @@
         <audio src="../sound/fail.mp3" id="failsound"></audio>
         <audio src="../sound/rightsound.mp3" id="rightsound"></audio>
 
-        <div>
-            <!-- video tag hidden und dann visible-->
-            <img src="../pics/b_voll.png" id = "blume"></div>
-            <video src="../pics/logo.mp4" id = "animation"></video>
+
+
+        <div id="wort">
+            <p id="ausgabe"></p>
+        </div>
 </div>
 
 <br>

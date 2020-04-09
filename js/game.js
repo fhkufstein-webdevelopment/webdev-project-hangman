@@ -1,14 +1,17 @@
-let words = ['Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','Telekommunikationsüberwachungsverordnung'];
+let words = ['grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung','rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz','telekommunikationsüberwachungsverordnung'];
 let word = words[Math.floor(Math.random() * words.length)];
 
 
 
-let maxAmountOfTime = 60; //let = Variable
+let maxAmountOfTime = 60;
 document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen ist
 
     document.getElementById("startbutton").addEventListener("click",function () {
         setInterval(timer,1000);
     })
+
+    document.getElementById("wort").style
+
 });
 
 
@@ -31,15 +34,28 @@ function timeTout() {
 }
 
 
+let fehler = 0;
+let answer = [];
+
 function play(buchstabe){
 
-    let answer = [];
     for(var i = 0; i< word.length; i++){
 
         if(buchstabe == word[i]){
 
             answer[i] = buchstabe;
-            alert (answer);
+            document.getElementById("ausgabe").innerHTML = answer;
+
+            if(fehler != 0){
+                fehler--;
+            }else if(document.getElementById("blume").src == "../pics/b_voll.png"){
+                document.getElementById("animation").style.visibility = "visible";
+                document.getElementById("blume").style.visibility = "hidden";
+            }
+            document.getElementById("blume").src = "../pics/b_fehler" + fehler + ".png";
+        }else{
+            fehler++;
+            document.getElementById("blume").src = "../pics/b_fehler" + fehler + ".png";
         }
 
         checkIfComplete();
@@ -49,18 +65,14 @@ function play(buchstabe){
 
 function checkIfComplete() {
     let richtig = 0;
-    let falsch = 0;
     for (let i = 0; i<word.length;i++){
         if(answer[i] == word[i]){
             richtig++;
-        }else{
-            document.getElementById("blume").src = "b_fehler1" + ".png";
-            falsch++;
-
         }
     }
     if(richtig == word.length){
         alert("spiel fertig");
+        timeTout();
     }
 }
 

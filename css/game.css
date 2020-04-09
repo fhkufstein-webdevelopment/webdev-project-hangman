@@ -1,5 +1,4 @@
 #wort{
-    float: right;
     min-width: 400px;
     background-color: fuchsia;
     height: 100px;
@@ -17,4 +16,12 @@
 
 #animation {
     visibility: hidden;
+    float:right;
+    width:300px;
+}
+
+#blume {
+    float:right;
+    width: 250px;
+    padding-top: 30px;
 }
