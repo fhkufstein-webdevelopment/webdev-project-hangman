@@ -5,13 +5,27 @@ var word = words[Math.floor(Math.random() * words.length)];
 let startButton;
 let startTimer;
 let maxAmountOfTime = 60;
+let highscoreButton;
 document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen ist
     startButton = document.getElementById("startbutton");
+    highscoreButton = document.getElementById("highscore");
+    alphabetButtonStatus(true);
     startButton.addEventListener("click",function () {
         startTimer = setInterval(time,1000);
+        alphabetButtonStatus(false);
         startAllItems();
     });
+    highscoreButton.addEventListener("click", function(){
+        gameFinished(maxAmountOfTime);
+    })
 });
+let alphabet = "abcdefghijklmnopqrstuvwxyzäöü"
+function alphabetButtonStatus(status) {
+    for(let i = 0; i< alphabet.length;i++){
+        let currentButton = "alphabet-"+alphabet[i]; //id
+        document.getElementById(currentButton).disabled = status;
+    }
+}
 
 function time(){
     maxAmountOfTime--;
@@ -24,14 +38,17 @@ function time(){
         gameComplete(false);
         maxAmountOfTime = 60;
         clearInterval(startTimer);
+
     }
 };
 function startAllItems() {
     startTimer;
+    startButton.disabled = true;
 }
 
 function timeTout() {
     clearInterval(startTimer);
+    startButton.disabled = true;
 }
 
 
@@ -46,16 +63,27 @@ function checkIfComplete() {
         gameComplete(true);
     }
 }
-
 let letterCount = 0;
-let answer = [];
+let letterCountOld = 0;
+let flowerStatus = 5;
+
+var answer = [];
 function play(letter){
+    let letterToDisable = "alphabet-" + letter;
+    document.getElementById(letterToDisable).disabled = true;
+
     for(var i = 0; i< word.length; i++){
         if(letter == word[i].toLowerCase()){
             answer[i] = letter;
             printWordsOut();
         }
         checkIfComplete();
+    }
+    if(letterCountOld<letterCount){
+        letterCountOld = letterCount;
+        switchFlower(1);
+    }else {
+        switchFlower(-1);
     }
 }
 
@@ -73,13 +101,57 @@ function printWordsOut(){
     }
 }
 
+function switchFlower(changes) {
+    flowerStatus += changes;
+    if(flowerStatus > 6){
+        flowerStatus = 6;
+    }else if(flowerStatus <= 0){
+        gameComplete(false);
+    }else{
+
+
+        switch (flowerStatus) {
+            case 6: {
+                document.getElementById("blume").style.visibility = "hidden";
+                document.getElementById("animation").style.visibility = "visible";
+                document.getElementById("animation").src = "../pics/logo.mp4";
+                break
+            }
+            case 5: {
+                document.getElementById("blume").style.visibility = "visible";
+                document.getElementById("animation").style.visibility = "hidden";
+                document.getElementById("blume").src = "../pics/b_voll.png";
+                break;
+            }
+            case 4:
+                document.getElementById("blume").src = "../pics/b_fehler1.png";
+                break;
+            case 3:
+                document.getElementById("blume").src = "../pics/b_fehler2.png";
+                break;
+            case 2:
+                document.getElementById("blume").src = "../pics/b_fehler3.png";
+                break;
+            case 1:
+                document.getElementById("blume").src = "../pics/b_fehler4.png";
+                gameComplete(false);
+                break;
+        }
+    }
+}
+
+
 function gameComplete(status) {
+    alphabetButtonStatus(true);
+    startButton.disabled  = false;
     clearInterval(startTimer);
     if(status == true){
         alert("You won the Game");
     }else {
         alert("You lost the Game");
     }
+    document.getElementById("startbutton").style.visibility = "hidden";
+    document.getElementById("highscore").style.visibility = "visible";
 }
 
 // TODO: Richtige Variablen für Funktion verwenden
