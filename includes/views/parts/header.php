@@ -47,6 +47,7 @@
 
         <!-- Navi wird so angezeigt wenn User eingelogged-->
         <?php if(LOGGED_IN == true): ?>
+
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
                 <img src="../pics/logo.png"/>
                 <div class="container">
@@ -77,9 +78,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="new-user.html">Registrierung</a>
                                 </li>
-                                <li <?php if($this->current == "login"): ?>class="nav-item active" <?php else:?>class="nav-item"<?php endif; ?>>
+
+                                <li <?php if ($thisPage == "Index") { echo ' class="nav-item active"'; } else { echo ' class="nav-item active"'; } ?> >
                                     <a class="nav-link" href="../includes/views/index.php">INDEX TEST</a>
+
+
                                 </li>
+
 
                             </ul>
                         </div>
