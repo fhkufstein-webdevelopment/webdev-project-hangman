@@ -7,6 +7,9 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <?php if($this->current == "login"): ?>
@@ -31,7 +34,7 @@
 
 <body>
 <header>
-    <div class="inner">
+
 
         <!--
         <div class="logo">
@@ -40,73 +43,72 @@
         </div>
         -->
 
+
+
+        <!-- Navi wird so angezeigt wenn User eingelogged-->
         <?php if(LOGGED_IN == true): ?>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+                <img src="../pics/logo.png"/>
+                <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
 
-                <!-- Test, brauchen wir nicht?
+
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="/" class="navbar-brand active">Adressverwaltung</a>
+                        <a href="start.php" class="navbar-brand active">HangFlower</a>
                     </div>
-                -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="logout">(Abmelden)</a></li>
-                        </ul>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="game.html">Zum Game <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../includes/views/highscore.php">Highscore</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="new-user.html">Registrierung</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="new-user.html">Registrierung</a>
+                                </li>
+                                <li <?php if($this->current == "login"): ?>class="nav-item active" <?php else:?>class="nav-item"<?php endif; ?>>
+                                    <a class="nav-link" href="../includes/views/index.php">INDEX TEST</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+
 
                         <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="logout">(Abmelden)</a></li>
+                    </ul>
                     </div>
-                </div>
+
             </nav>
+
+
         <?php else: ?>
             <nav class="mainnav">
                 <ul class="nav nav-pills">
                     <li<?php if($this->current == "login"): ?>class="active"<?php endif; ?>><a href="login">Login</a></li>
                 </ul>
             </nav>
+
+
+
+
+
         <?php endif; ?>
-
-<!-- aus html kopiert -->
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
-
-                <img src="../pics/logo.png"/>
-                <!-- Logo einfügen -->
-
-                <div class="container">
-                    <a class="navbar-brand" href="start.html">Hangman Game</a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="start.html">Startseite <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../includes/views/highscore.php">Highscore</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="new-user.html">Registrierung</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </nav>
-<!-- Aus html kopiert Ende -->
 
 
 

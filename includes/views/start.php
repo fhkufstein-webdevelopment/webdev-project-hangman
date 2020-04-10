@@ -16,8 +16,9 @@ echo $this->header;
 
         <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/header.css">
 
-        <title>Hangman</title>
+        <title>HangFlower</title>
         <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
     </head>
 
@@ -25,7 +26,8 @@ echo $this->header;
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
 
-            <img src="../pics/logo.png"/>
+            <img src=
+            />
             <!-- Logo einfügen -->
 
             <div class="container">
@@ -52,12 +54,15 @@ echo $this->header;
             </div>
         </nav>
 
-        <header class="masthead">
+
+
+
+        <!--  <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12 text-center">
                         <h1 class="font-weight-light">HANGMAN</h1>
-                        <p class="lead"> Damit es netter wirkt, könnte man hier die Spielregeln hineinschreiben? Viel Spaß beim Spieln</p>
+                        <p class="lead"> Damit es netter wirkt, könnte man hier die Spielregeln hineinschreiben? Viel Spaß beim Spieln</p>-->
 
 
                         <!-- Button funktioniert-->
@@ -87,6 +92,18 @@ echo $this->header;
         <br>
         <br>
         <br>
+    <body>
+
+    <div class="headerstart">
+        <div id="bg">
+
+        </div>
+    </div>
+    </body>
+    <section>
+        <h2>So Funktioniert Hangflower</h2>
+        <p>Text</p>
+    </section>
 
 
 

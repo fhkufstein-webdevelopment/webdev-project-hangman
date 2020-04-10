@@ -3,8 +3,16 @@
 echo $this->header;
 
 ?>
-<div id="main">
+
+
+
+
+
+
+
+    <div id="main">
     <div class="row">
+
         <h1 class="col-xs-12">Login</h1>
         <p class="col-xs-12">
             Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
@@ -85,7 +93,7 @@ echo $this->header;
         </div>
     </div>
 </div>
-
+    </div>
 <?php
 
 echo $this->footer;
