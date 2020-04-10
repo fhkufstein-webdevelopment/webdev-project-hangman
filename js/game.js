@@ -141,7 +141,7 @@ function switchFlower(changes) {
 }
 
 
-function gameComplete(status) {
+function gameComplete(status, time) { // user und time für den highscore
     alphabetButtonStatus(true);
     startButton.disabled  = false;
     clearInterval(startTimer);
@@ -152,8 +152,21 @@ function gameComplete(status) {
     }
     document.getElementById("startbutton").style.visibility = "hidden";
     document.getElementById("highscore").style.visibility = "visible";
-}
 
+// Daten an den Highscore zu übergeben
+    $.ajax({
+        'url':    'game',
+        'method': 'post',
+        'data':    {'action': 'saveScore', 'zeit': time},
+        'success': function(receivedData) {
+            if(receivedData.result) {
+                //after save change url to scoreboard
+                location.href = 'highscore';
+            }
+        }
+    });
+}
+/* könnte man löschen
 // TODO: Richtige Variablen für Funktion verwenden
 // Funktion für das Ende des Spiels (in etwa)
 function gameFinished(userTime) {
@@ -170,7 +183,7 @@ function gameFinished(userTime) {
             }
         }
     });
-}
+} */
 
 //Läuft unser Spiel auf der Seite game mit einem GameController?
 

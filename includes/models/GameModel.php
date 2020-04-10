@@ -5,17 +5,18 @@
 //hängt mit GameController zusammen
 
 class GameModel
+
 {
-    public static function saveScoreAndAttempts($userid, $time /*, $attempts*/)
+    public static function saveScoreAndAttempts($benutzer, $zeit /*, $attempts*/)
     {
         $db = new Database();
 
         //prevent SQL Injection:
-        $userid = $db->escapeString($userid);
-        $time = $db->escapeString($time);
+        $benutzer = $db->escapeString($benutzer);
+        $zeit = $db->escapeString($zeit);
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO game(`userid`,/*`attempts`,*/`score`) VALUES('".$userid."','".$time."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`benutzer`,/*`attempts`,*/`zeit`) VALUES('".$benutzer."','".$zeit."')"; //,'".$attempts."'
         $db->query($sql);
     }
 

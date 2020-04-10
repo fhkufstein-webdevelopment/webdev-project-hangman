@@ -18,10 +18,10 @@
     if ($_POST) {
         $benutzer = $_POST["benutzer"];
         $zeit = $_POST["zeit"];
-        $datum = $_POST["datum"];
+       // $datum = $_POST["datum"];
 
         //Daten einfügen in Datenbank (SQL Statement)
-        $sql = "INSERT INTO tabellenname (benutzer, zeit, datum ) VALUES ('$benutzer', '$zeit', '$datum')";
+        $sql = "INSERT INTO tabellenname (`benutzer`, zeit ) VALUES ('".$benutzer."', '".$zeit."' )"; //"'.$datum.'"
 
         //Befehl der Datenbank übermitteln
         mysqli_query($connection, $sql);

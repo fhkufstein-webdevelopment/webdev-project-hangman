@@ -28,12 +28,13 @@ class GameController extends Controller
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
-            $time = $_POST['time'];
-            //$attempts = $_POST['attempts'];
-            $userid = $this->user->id;
+            $zeit = $_POST['time'];
+            $benutzer = $_POST['user'];
+
+            $benutzer= $this->user->id;
 
             //now we need our Model to save the values
-            GameModel::saveScoreAndAttempts($userid, $time /*,$attempts*/); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
+            HighscoreModel::saveScoreAndAttempts($benutzer, $zeit /*,$attempts*/); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:
             //$gameObj = new GameModel();
             //$gameObj->saveScoreAndAttempts($userid, $score, $attempts);
