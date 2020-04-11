@@ -126,7 +126,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="start.php" class="navbar-brand active">HangFlower</a>
+                        <a href="start" class="navbar-brand active">HangFlower</a>
                     </div>
 
 
@@ -185,7 +185,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="start.php" class="navbar-brand active">HangFlower</a>
+                        <a href="start" class="navbar-brand active">HangFlower</a>
                     </div>
 
 
