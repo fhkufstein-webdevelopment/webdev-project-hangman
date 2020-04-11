@@ -24,35 +24,6 @@
     </head>
 
     <body>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
-
-                <img src=""/>
-                <!-- Logo einfügen -->
-
-                <div class="container">
-                    <a class="navbar-brand" href="webdev-project-hangman/../html/game.html"> Hangman Game </a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                        </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="webdev-project-hangman/../html/game.html">Startseite <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="highscore">Highscore</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login">Registrierung</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
             <!--  <header class="masthead">
             <div class="container h-100">

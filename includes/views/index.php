@@ -2,7 +2,7 @@
     echo $this->header;
 ?>
 
-<?php $thisPage="Index"; ?>
+<?php $thisSeite="Index"; ?>
 
 <!DOCTYPE html>
 <html>

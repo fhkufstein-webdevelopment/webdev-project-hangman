@@ -1,3 +1,12 @@
+<?php
+
+echo $this->header;
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,20 +30,12 @@
 
 
 <body>
-<div>
-
-
-    <header>
-        <img alt="Logo" src="">
-    </header>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
     <div class="container jumbotron container-fluid jumbotron" >
         <div id="countdown">01:00</div>
@@ -43,6 +44,8 @@
             <!-- video tag hidden und dann visible-->
             <img src="../pics/b_voll.png" id = "blume">
             <video src="../pics/logo.mp4" id = "animation" type="video/mp4" autoplay></video>
+
+
         </div>
 
         <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>
@@ -96,24 +99,22 @@
         <div id="wort">
             <p id="ausgabe"></p>
         </div>
-</div>
+    </div>
 
-<br>
-<br>
-
-<footer class="footer">
-    <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
-</footer>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <br>
+    <br>
 
 
-<!-- für Highscore Tabelle -> ist villeicht richtig -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <!-- für Highscore Tabelle -> ist villeicht richtig -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 </body>
 </html>

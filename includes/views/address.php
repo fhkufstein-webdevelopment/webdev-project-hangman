@@ -1,3 +1,10 @@
+
+<?php
+
+echo $this->header;
+
+?>
+
 <div class="row">
 	<form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/address/" class="col-xs-12">
 
