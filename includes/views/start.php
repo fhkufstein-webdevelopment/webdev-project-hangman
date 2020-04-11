@@ -1,11 +1,9 @@
 <?php
-
-echo $this->header;
-
+    echo $this->header;
 ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -18,46 +16,45 @@ echo $this->header;
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/header.css">
 
-        <title>HangFlower</title>
+        <title>
+            HangFlower
+        </title>
+
         <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
     </head>
 
     <body>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top ">
 
-            <img src=
-            />
-            <!-- Logo einfügen -->
+                <img src=""/>
+                <!-- Logo einfügen -->
 
-            <div class="container">
-                <a class="navbar-brand" href="webdev-project-hangman/../html/game.html">Hangman Game</a>
+                <div class="container">
+                    <a class="navbar-brand" href="webdev-project-hangman/../html/game.html"> Hangman Game </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                        </span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="webdev-project-hangman/../html/game.html">Startseite <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="highscore">Highscore</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login">Registrierung</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="webdev-project-hangman/../html/game.html">Startseite <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="highscore">Highscore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login">Registrierung</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
 
-            </div>
-        </nav>
-
-
-
-
-        <!--  <header class="masthead">
+            <!--  <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12 text-center">
@@ -65,17 +62,9 @@ echo $this->header;
                         <p class="lead"> Damit es netter wirkt, könnte man hier die Spielregeln hineinschreiben? Viel Spaß beim Spieln</p>-->
 
 
-                        <!-- Button funktioniert-->
-                        <a href="../webdev-project-hangman/html/game.html"><button>Zum Game!</button></a>
-
                         <!--
                         <button type="button2" href="../html/game.html">
                             Game öffnen
-                        </button>
-
-                        <button>
-                            <input class=“ButtonClass“ type=“button“ value=“Hier wird geklickt“ onklick=“www.google.at“/>
-                            Button 3
                         </button>
 
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
@@ -83,35 +72,36 @@ echo $this->header;
                         </button>
                         -->
 
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <br>
-        <br>
-        <br>
-        <br>
-    <body>
-
-    <div class="headerstart">
-        <div id="bg">
-
         </div>
-    </div>
-    </body>
-    <section>
-        <h2>So Funktioniert Hangflower</h2>
-        <p>Text</p>
-    </section>
 
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
 
+            <h2>Hangflower</h2>
+            <br>
 
+            <!-- Button funktioniert-->
+            <a href="../webdev-project-hangman/html/game.html"><button>Zum Game!</button></a>
+            <br>
+            <br>
 
+            <p> Hier wird eine kurze Spielbeschreibung eingefügt. </p>
+            <br>
+        </div>
+
+        <!--  wer braucht das für was?
+        <div class="headerstart">
+        <div id="bg">
+            <h1> Test Headerstart</h1>
+        </div>
+         </div> -->
 
                  <!--Modal-->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                -->
 
                    <!-- <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -164,15 +154,14 @@ echo $this->header;
         <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
     </footer> -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
-    </html>
+</html>
 
 <?php
-echo $this->footer;
-    ?>
+    echo $this->footer;
+?>
