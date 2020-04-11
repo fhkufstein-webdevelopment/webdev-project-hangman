@@ -4,13 +4,7 @@
 
 <?php $thisSeite="Index"; ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="../css/main.css">
-    </head>
 
-    <body>
         <div>
             <a href="start"><button>Zur Spielestartseite!</button></a>
             <br>
@@ -96,8 +90,6 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-    </body>
-</html>
 
 <?php
     echo $this->footer;

@@ -4,33 +4,7 @@ echo $this->header;
 
 ?>
 
-    <!doctype html>
-    <html lang="en">
-    <head>
-        < !-- Required meta tags -- >
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        < !-- Bootstrap CSS -- >
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/login-microsite.css">
-        <title>Hangman</title>
-        <link rel="icon" type="image/vnd.microsoft.icon" href="../pics/favicon.ico">
-
-
-    </head>
-<body>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <div class="container p-3 my-3 border" style="background:transparent">
 
@@ -122,8 +96,6 @@ echo $this->header;
 </div>
     </div>
 
-</body>
-</html>
 <?php
 
 echo $this->footer;

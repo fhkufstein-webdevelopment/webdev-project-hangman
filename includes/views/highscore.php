@@ -32,14 +32,7 @@ if ($_POST) {
 */
 ?>
 
-<!DOCTYPE html>
-<html lang="de">
 
-<head>
-    <title> Highscore </title>
-</head>
-
-<body>
 <div class="highscore_table">
     <table class="table table-striped">
         <thead>
@@ -89,25 +82,7 @@ if ($_POST) {
     </table>
 </div>
 
-<!-- <div class="container jumbotron container-fluid jumbotron" >
-        <div class="list-group">
-            <button type="button" class="list-group-item"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> User A</button>
-            <button type="button" class="list-group-item">User B</button>
-            <button type="button" class="list-group-item">User C</button>
-            <button type="button" class="list-group-item">User D</button>
-            <button type="button" class="list-group-item">User E</button>
-        </div>
-    </div> -->
 
-<!-- <footer class="footer">
-
-    <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
-</footer>
--->
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 
 <!-- neues jQuery hinzugefügt -->
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -117,8 +92,6 @@ if ($_POST) {
 <!-- jQuery für Highscore laut Tutorial -->
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-</body>
-</html>
 
 <?php
 echo $this->footer;
