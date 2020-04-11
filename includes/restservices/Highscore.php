@@ -59,7 +59,7 @@ class Highscore extends RESTClass
 
 	protected function createRequest($data)
 	{
-		$requiredFields = array('benutzer', 'zeit');
+		$requiredFields = array('benutzer', 'time');
 
 		$error = false;
 		$errorFields = array();
@@ -99,7 +99,7 @@ class Highscore extends RESTClass
 
 	protected function saveRequest($data)
 	{
-		$requiredFields = array('benutzer', 'zeit');
+		$requiredFields = array('benutzer', 'time');
 
 		$error = false;
 		$errorFields = array();

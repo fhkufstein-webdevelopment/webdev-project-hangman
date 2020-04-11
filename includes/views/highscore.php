@@ -57,22 +57,26 @@ if ($_POST) {
         $connection = mysqli_connect($host, $benutzer, $pw, $datenbank);
 
 
-        $sql = "SELECT * FROM highscore ORDER BY punkte DESC";
+        //$sql = "SELECT * FROM highscore ORDER BY punkte DESC";
+        // $ergebnis = mysqli_connect($connection, $sql);
+        $sql = "SELECT * FROM highscore ORDER BY highscore DESC";
+        $ergebnis= mysqli_connect($connection, $sql);  //hier dürfte kein String stehen
 
-        $ergebnis = mysqli_connect($connection, $sql);
 
         $platz = 1;
 
-        while ($zeile = mysqli_fetch_assoc($ergebnis)) {
+        while ($zeile = mysqli_fetch_assoc($ergebnis)) {  // hier sollte not null stehen
 
             $userid= $zeile["userid"];#array
-            $punkte = $zeile["time"];#array
+            $time = $zeile["time"];#array
+            //$punkte = $zeile["time"];#array
+
 
             echo "<tr>";
             echo    "<td>$platz</td>";
 
-            echo    "<td>$userid</td>";
-            echo    "<td>$time</td>";
+                "<td>$userid</td>";
+               "<td>$time</td>";
             echo "</tr>";
 
             $platz++; //damit rang immer erhöht wird

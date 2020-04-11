@@ -17,7 +17,7 @@ class HighscoreModel
         return null;
     }
 
-    public static function getAddressesByUserId($userId)
+    public static function getHighscoreByUserId($userId)
     {
         $db = new Database();
 
@@ -42,7 +42,7 @@ class HighscoreModel
     public static function createNewHighscore($data)
     {
         $db = new Database();
-        $sql = "INSERT INTO highscore(benutzer, zeit) VALUES('".$db->escapeString($data['benutzer'])."','".$db->escapeString($data['zeit'])."'";
+        $sql = "INSERT INTO highscore(benutzer, time) VALUES('".$db->escapeString($data['benutzer'])."','".$db->escapeString($data['time'])."'";
         $db->query($sql);
 
         $data['id'] = $db->insertId();
@@ -53,7 +53,7 @@ class HighscoreModel
     public static function saveHighscore($data)
     {
         $db = new Database();
-        $sql = "UPDATE highscore SET benutzer='".$db->escapeString($data['benutzer'])."',zeit='".$db->escapeString($data['zeit'])."' WHERE id=".intval($data['id']);
+        $sql = "UPDATE highscore SET benutzer='".$db->escapeString($data['benutzer'])."',time='".$db->escapeString($data['time'])."' WHERE id=".intval($data['id']);
         $db->query($sql);
 
         return (object) $data;
@@ -69,16 +69,16 @@ class HighscoreModel
 
 
 
-    public static function saveScoreAndAttempts($benutzer, $zeit /*, $attempts*/)
+    public static function saveScoreAndAttempts($benutzer, $time /*, $attempts*/)
     {
         $db = new Database();
 
         //prevent SQL Injection:
         $benutzer = $db->escapeString($benutzer);
-        $zeit = $db->escapeString($zeit);
+        $time = $db->escapeString($time);
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`benutzer`,/*`attempts`,*/`zeit`) VALUES('".$benutzer."','".$zeit."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`benutzer`,/*`attempts`,*/`time`) VALUES('".$benutzer."','".$time."')"; //,'".$attempts."'
         $db->query($sql);
     }
 }

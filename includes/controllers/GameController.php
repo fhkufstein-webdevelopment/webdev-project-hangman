@@ -27,6 +27,7 @@ class GameController extends Controller
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
+
             $time = $_POST['time']; //erstes time war vorher zeit
             $userid = $this->user->id;
 

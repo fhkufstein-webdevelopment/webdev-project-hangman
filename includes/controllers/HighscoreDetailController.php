@@ -5,15 +5,15 @@
 /**
  * @author Daniel Hoover <https://github.com/danielhoover>
  */
-class HighscoreController extends Controller
+class HighscoreDetailController extends Controller
 {
-	protected $viewFileName = "highscore"; //this will be the View that gets the data...
+	protected $viewFileName = "highscoredetail"; //this will be the View that gets the data...
 	protected $loginRequired = true;
 
 
 	public function run()
 	{
-		$this->view->title = "Highscore";
+		$this->view->title = "Highscoredetails";
 		$this->view->username = $this->user->username;
 
 		//$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
@@ -22,10 +22,10 @@ class HighscoreController extends Controller
         if(isset($_GET['id']))
         {
             $id = $_GET['id'];
-            $this->view->address = AddressModel::getAddressById($id);
-            if($this->view->address !== null && $this->view->address->userId != $this->user->id)
+            $this->view->address = HighscoreModel::getHighscoreById($id);
+            if($this->view->highscore !== null && $this->view->highscore->userId != $this->user->id)
             {
-                $this->view->address = null;
+                $this->view->highscore = null;
             }
         }
 
