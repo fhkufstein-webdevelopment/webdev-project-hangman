@@ -14,19 +14,28 @@
 
 
     <?php if($this->current == "login"): ?>
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
 
     <?php elseif ($this->current == "game"): ?>
+        <script>alert("Hallo")</script>
+    <link href="../../../css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../../css/game.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/game.css">
         <script src="../../../js/game.js"></script>
 
 
     <?php elseif ($this->current == "index"): ?>
-        <link href="css/toastr.min.css" rel="stylesheet">
+        <link href="../../../css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/bootstrap-theme.min.css" rel="stylesheet">
 
     <?php elseif ($this->current == "anmelden"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
@@ -115,7 +124,7 @@
         <?php if(LOGGED_IN == true): ?>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-                <img src=/pics/logo.png>
+                <img src="../../../pics/logo.png">
 
 
                 <div class="container">
