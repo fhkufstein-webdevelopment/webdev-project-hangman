@@ -2,7 +2,7 @@
 
 // TODO: Variablennamen müssen noch überprüft und ausgebessert werden
 // TODO: eventuell muss noch eine Datenbank bei phpMyAdmin angelegt werden
-// hängt mit GameController zusammen
+// hängt mit dem GameController zusammen
 
 class GameModel {
 

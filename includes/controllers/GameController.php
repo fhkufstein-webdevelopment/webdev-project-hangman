@@ -22,6 +22,7 @@ class GameController extends Controller
     }
 
 
+
     private function checkForSaveScorePost()
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')

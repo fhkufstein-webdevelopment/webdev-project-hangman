@@ -157,7 +157,7 @@ function gameComplete(status, time) { // user und time für den highscore
     $.ajax({
         'url':    'game',
         'method': 'post',
-        'data':    {'action': 'saveScore', 'time': time}, //zeit mit time ersetzt
+        'data':    {'action': 'saveScore', 'time': time}, // zeit mit time ersetzt
         //'variablenname': phpMyAdmin-Spaltenname ?
 
         'success': function(receivedData) {
