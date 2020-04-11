@@ -55,7 +55,7 @@
             <br>
 
             <!-- Button funktioniert-->
-            <a href="../webdev-project-hangman/html/game.html"><button>Zum Game!</button></a>
+            <a href="game"><button>Zum Game!</button></a>
             <br>
             <br>
 

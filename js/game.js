@@ -153,11 +153,13 @@ function gameComplete(status, time) { // user und time für den highscore
     document.getElementById("startbutton").style.visibility = "hidden";
     document.getElementById("highscore").style.visibility = "visible";
 
-// Daten an den Highscore zu übergeben
+    // Daten an den Highscore zu übergeben
     $.ajax({
         'url':    'game',
         'method': 'post',
-        'data':    {'action': 'saveScore', 'zeit': time},
+        'data':    {'action': 'saveScore', 'time': time}, //zeit mit time ersetzt
+        //'variablenname': phpMyAdmin-Spaltenname ?
+
         'success': function(receivedData) {
             if(receivedData.result) {
                 //after save change url to scoreboard

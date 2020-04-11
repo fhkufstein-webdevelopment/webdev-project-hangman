@@ -13,14 +13,12 @@ class GameController extends Controller
     public function run()
     {
         // TODO: Implement run() method.
-
         $this->view->title = "Game";
-        $this->view->username = $this->user->username;  //Stimmen Variablennamen??
+        $this->view->username = $this->user->username;  //ist "username" richtig oder vl nur "name"?
 
         //vielleicht noch andere Sachen
 
         $this->checkForSaveScorePost();
-
     }
 
 
@@ -28,13 +26,13 @@ class GameController extends Controller
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
-            $zeit = $_POST['time'];
-            $benutzer = $_POST['user'];
-
-            $benutzer= $this->user->id;
+            $time = $_POST['time']; //erstes time war vorher zeit
+            $userid = $this->user->id;
 
             //now we need our Model to save the values
-            HighscoreModel::saveScoreAndAttempts($benutzer, $zeit /*,$attempts*/); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
+            HighscoreModel::saveScoreAndAttempts($userid, $time); //Variablennamen von oben
+
+            //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:
             //$gameObj = new GameModel();
             //$gameObj->saveScoreAndAttempts($userid, $score, $attempts);
@@ -47,8 +45,4 @@ class GameController extends Controller
             $jsonResponse->send();
         }
     }
-
-
-
-
 }

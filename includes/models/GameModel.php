@@ -2,21 +2,21 @@
 
 // TODO: Variablennamen müssen noch überprüft und ausgebessert werden
 // TODO: eventuell muss noch eine Datenbank bei phpMyAdmin angelegt werden
-//hängt mit GameController zusammen
+// hängt mit GameController zusammen
 
-class GameModel
+class GameModel {
 
-{
-    public static function saveScoreAndAttempts($benutzer, $zeit /*, $attempts*/)
+    public static function saveScore ($userid, $time)
     {
         $db = new Database();
 
         //prevent SQL Injection:
-        $benutzer = $db->escapeString($benutzer);
-        $zeit = $db->escapeString($zeit);
+        $userid = $db->escapeString($userid);
+        $time = $db->escapeString($time);
+
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`benutzer`,/*`attempts`,*/`zeit`) VALUES('".$benutzer."','".$zeit."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('".$userid."','".$time."')"; //,'".$attempts."'
         $db->query($sql);
     }
 
