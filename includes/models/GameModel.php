@@ -17,6 +17,7 @@ class GameModel {
         /*$attempts = $db->escapeString($attempts);*/
 
         $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('".$userid."','".$time."')"; //,'".$attempts."'
+
         $db->query($sql);
     }
 

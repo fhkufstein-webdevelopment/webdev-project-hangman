@@ -5,6 +5,7 @@ echo $this->header;
 // TODO: Auf Fehler kontrollieren z. B. Logo wird nicht angezeigt und Fußzeile wird nicht angezeigt
 
 //Datenbankverbindung
+/*
 $host = "localhost";
 $datenbank = "webdev-project-hangman";
 $benutzer = "hangmangame";
@@ -23,11 +24,12 @@ if ($_POST) {
     //$datum = $_POST["datum"];
 
     //Daten einfügen in Datenbank (SQL Statement)
-    $sql = "INSERT INTO highscore (`userid`, `time`) VALUES ('".$userid."', '".time."')"; // ,'".$datum."'
+    $sql = "INSERT INTO highscore (`userid`, `time`) VALUES ('".$userid."', '".$time."')"; // ,'".$datum."'
 
     //Befehl der Datenbank übermitteln
     mysqli_query($connection, $sql);
 }
+*/
 ?>
 
 <!DOCTYPE html>
