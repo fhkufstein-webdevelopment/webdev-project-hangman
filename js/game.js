@@ -114,7 +114,7 @@ function switchFlower(changes) {
             case 6: {
                 document.getElementById("blume").style.visibility = "hidden";
                 document.getElementById("animation").style.visibility = "visible";
-                document.getElementById("animation").src = "../pics/logo.mp4";
+                document.getElementById("animation").src = "pics/logo.mp4";
                 break
             }
             case 5: {

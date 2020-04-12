@@ -2,94 +2,60 @@
     echo $this->header;
 ?>
 
-<?php $thisSeite="Index"; ?>
+<div class="headerstart">
 
 
-        <div>
-            <a href="start"><button>Zur Spielestartseite!</button></a>
-            <br>
-            <br>
+<section id="hero">
+    <div id="hero-mask"></div>
+    <header id="title-fade">
+        <h1 class="text-center textheader">Hangflower</h1>
+        <div class="text-center" >
+            <a href="../webdev-project-hangman/html/game.html"><button type="button" class="btn btn-info">Zum Game!</button></a>
+
         </div>
 
-        <div id="main">
-            <div class="row">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#editModal"><i class="glyphicon glyphicon-plus"></i> Neue Adresse anlegen</button>
+    </header>
+</section>
 
+<div class="full-height" >
+    <div class="container">
+        <br>
 
-                <?php if($this->addresses): ?> <!-- Sind hinterlegte Adressen vorhanden? -->
+        <h2 class="text-left textw">Was ist Hangflower?</h2>
+        <p class="text-justify textw" >
+            Hangflower funktionert wie das Spiel Hangman. Du kannst auf die Buchstaben klicken und so einen Buchstaben erraten.
+            Du hast 4 Versuche um das richtige Wort zu finden.
+        </p>
+        <br>
+        <h2 class="text-left textw">Wie funktionert das Spiel?</h2>
+        <p class="text-left textw">
+            1. Starte das Geme
+            <br>
+            2. Klicke auf die richtigen Buchstaben
+            <br>
+            3. Mehr als 4 Versuche -> Leider verloren
+            <br>
+            4. Weniger als 4 Versuche -> Du gewinnst!
+        </p>
+        <br>
 
-                    <!-- von parts/header hierher platziert -->
-                    <div class="logo">
-                        <div class="name">Meine hinterlegten Adressen/weiteren Profilinformationen</div> <!-- Addressverwaltung -->
-                        <div class="version">1.0</div>
-                    </div>
+        <div class="jquery-script-ads" align="center">
 
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Vorname</th>
-                                <th>Ort</th>
-                                <th>E-Mail</th>
-                                <th>Download</th>
-                                <th>Bearbeiten</th>
-                                <th>Löschen</th>
-                            </tr>
-                        </thead>
-
-
-                        <tbody>
-                            <?php foreach($this->addresses as $address): ?>
-                                <tr>
-                                    <td> <a href="adresse?id=<?php echo $address->id; ?>"><?php echo $address->id; ?></a></td>
-                                    <td><?php echo $address->lastname; ?></td>
-                                    <td><?php echo $address->firstname; ?></td>
-                                    <td><?php echo $address->city; ?></td>
-
-                                    <td><?php echo $address->email; ?></td> <!-- neues Feld E-Mail -->
-
-                                    <!-- Button Download -->
-                                    <td><a href="download?id=<?php echo $address->id; ?>" class="btn btn-primary">Download</a></td>
-
-                                    <!-- Button Bearbeiten -->
-                                    <td><button class="btn btn-default" data-toggle="modal" data-target="#editModal" data-id="<?php echo $address->id; ?>"><i class="glyphicon glyphicon-pencil"></i> Bearbeiten</button></td>
-
-                                    <!-- Button Löschen -->
-                                    <td><a class="btn btn-danger triggerDelete" href="api/address/" data-id="<?php echo $address->id; ?>"><i class="glyphicon glyphicon-trash"></i> Löschen</a></td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                <?php else: ?> <!-- Wenn keine hinterlegten Adressen vorhanden sind -->
-                    <p>&nbsp;</p>
-                        <div class="alert alert-info">Noch keine Adressen vorhanden - Sie können über den Button <strong>Neue Adresse anlegen</strong> eine neue Adresse Ihrer Adressverwaltung hinzufügen.
-                        </div>
-                <?php endif; ?>
-            </div>
         </div>
 
+    </div>
+</div>
 
-        <!-- Klick auf Button "+ neue Adresse anlegen" -> dieses Fenster öffnet sich -->
-        <div class="modal fade" tabindex="-1" role="dialog" id="editModal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title"></h4>
-                    </div>
-                    <div class="modal-body">
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
-                        <button type="button" class="btn btn-primary"></button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+    <script type="text/javascript">
+        //initialize
+        $(document).ready(function() {
+            $('#hero').heroFade();
+        });
+    </script>
+
+
+
 
 <?php
     echo $this->footer;

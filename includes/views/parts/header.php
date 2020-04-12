@@ -18,67 +18,82 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login-microsite.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+
 
 
     <?php elseif ($this->current == "game"): ?>
         <script>alert("Hallo")</script>
-    <link href="../../../css/toastr.min.css" rel="stylesheet">
+    <link href="css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../../../css/game.css">
-        <script src="../../../js/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <link rel="stylesheet" href="css/body.css">
+        <script src="js/game.js"></script>
 
 
     <?php elseif ($this->current == "index"): ?>
-        <link href="../../../css/toastr.min.css" rel="stylesheet">
+        <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+
+
 
     <?php elseif ($this->current == "anmelden"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
 
     <?php elseif ($this->current == "logout"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/header.css">
 
     <?php elseif ($this->current == "adresse"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
 
     <?php elseif ($this->current == "highscore"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
 
     <?php elseif ($this->current == "user"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
 
     <?php elseif ($this->current == "start"): ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../../../css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../../../css/main.css">
-    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
 
+    <link rel="stylesheet" href="css/body.css">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <script src="../../../js/headerFade.js"></script>
+        <script src="js/headerFade.js"></script>
 
 
 
@@ -95,16 +110,6 @@
 
 
 
-
-    <?php if($this->current == "game"): ?>
-        <script type="text/javascript" src="js/game.js"></script>
-
-
-    <?php elseif($this->current == "start"): ?>
-        <script type="text/javascript" src="js/headerFade.js"></script>
-
-
-    <?php endif; ?>
 </head>
 
 
@@ -124,7 +129,7 @@
         <?php if(LOGGED_IN == true): ?>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-                <img src="../../../pics/logo.png">
+                <img src="pics/logo.png">
 
 
                 <div class="container">
@@ -135,7 +140,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="start" class="navbar-brand active">HangFlower</a>
+                        <a href="index" class="navbar-brand active">HangFlower</a>
                     </div>
 
 
@@ -185,7 +190,7 @@
 
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-                <img src="../pics/logo.png"/>
+                <img src="pics/logo.png"/>
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -194,7 +199,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="start" class="navbar-brand active">HangFlower</a>
+                        <a href="index" class="navbar-brand active">HangFlower</a>
                     </div>
 
 
@@ -202,7 +207,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="start">Zum Game/ Startseite <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="login">Game <span class="sr-only">(current)</span></a>
                             </li>
 
                             <li class="nav-item">
