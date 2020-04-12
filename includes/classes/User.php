@@ -83,6 +83,17 @@ class User extends Database
 		exit();
 	}
 
+
+//Nach dem Login zur Game Seite?
+    public function redirectToGame()
+    {
+        header('Location: '.GAME_URL);
+        header('Status: 303');
+        exit();
+    }
+
+
+
 	public function login($username, $password)
 	{
 		$sql = "SELECT `id`,`password` FROM `user` WHERE `name`='" . $this->escapeString($username) . "'";
@@ -105,6 +116,9 @@ class User extends Database
 			$this->isLoggedIn = true;
 
 			return true;
+
+			//Nach dem Login zur Game Seite
+            $this->redirectToGame();
 		}
 
 		$this->isLoggedIn = false;

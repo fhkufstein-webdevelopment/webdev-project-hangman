@@ -120,20 +120,20 @@ function switchFlower(changes) {
             case 5: {
                 document.getElementById("blume").style.visibility = "visible";
                 document.getElementById("animation").style.visibility = "hidden";
-                document.getElementById("blume").src = "../pics/b_voll.png";
+                document.getElementById("blume").src = "pics/b_voll.png";
                 break;
             }
             case 4:
-                document.getElementById("blume").src = "../pics/b_fehler1.png";
+                document.getElementById("blume").src = "pics/b_fehler1.png";
                 break;
             case 3:
-                document.getElementById("blume").src = "../pics/b_fehler2.png";
+                document.getElementById("blume").src = "pics/b_fehler2.png";
                 break;
             case 2:
-                document.getElementById("blume").src = "../pics/b_fehler3.png";
+                document.getElementById("blume").src = "pics/b_fehler3.png";
                 break;
             case 1:
-                document.getElementById("blume").src = "../pics/b_fehler4.png";
+                document.getElementById("blume").src = "pics/b_fehler4.png";
                 gameComplete(false);
                 break;
         }

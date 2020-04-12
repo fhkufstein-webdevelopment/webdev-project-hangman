@@ -30,7 +30,7 @@ echo $this->header;
                         <?php if($this->errorPasswd == true): ?>
                             <div class="alert alert-danger alert-dismissible fade in" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true">&times</span>
                                 </button>
                                 <h4>Benutzername und/oder Passwort sind falsch</h4>
                                 <p>Prüfen Sie bitte ob Sie sich nicht vertippt haben und versuchen Sie es erneut!</p>
@@ -68,7 +68,7 @@ echo $this->header;
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span></button>
                     <br>
                     <h4 class="modal-title text-info" id="registerModalLabel">Neuer User</h4>
                 </div>

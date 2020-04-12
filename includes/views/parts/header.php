@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="css/login-microsite.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-        <script src="js/login.js">
+        <script  type="text/javascript"src="js/login.js">
             <script type="text/javascript" src="js/toastr.min.js"></script>
-        <script type="text/javascript" src="js/core.js"></script>
-        <script type="text/javascript" src="js/core2.js"></script>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 
 
 
@@ -38,8 +38,8 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/game.css">
-    <link rel="stylesheet" href="css/body.css">
-        <script src="js/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/body.css">
+        <script type="text/javascript" src="js/game.js"></script>
 
 
     <?php elseif ($this->current == "index"): ?>
