@@ -15,9 +15,9 @@
 
 
     <?php if($this->current == "login"): ?>
-
-    <link rel="stylesheet" href="css/login-microsite.css">
     <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/login-microsite.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
 
 
@@ -108,6 +108,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/toastr.min.js"></script>
         <script  type="text/javascript"src="js/login.js">
+
+          <script  type="text/javascript"src="js/register.js">
 
 
 
