@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.bodyhangman {
+    font-family: 'Roboto', sans-serif;
 
+
+}
 #wort{
     min-width: 400px;
     height: 100px;
