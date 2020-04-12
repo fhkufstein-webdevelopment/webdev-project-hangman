@@ -1,20 +1,16 @@
-  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
 
-  .bodyhangman {
-    font-family: 'Roboto', sans-serif;
-
-
-}
 
 #hero {
     background-attachment: fixed;
     background-image: url('../pics/flowers-colorful-bloom-daisies-70330.jpg ');
     height: 100vh;
     width: 100%;
-    margin-top: 0;
+    margin-top: -20px;
 }
 
 .textw{
@@ -23,9 +19,18 @@
 }
 
 .textheader{
+     color: #fff;
+     font-size: 150px;
+     font-family: 'Indie Flower';
+     text-align: center;
+
+ }
+
+.textheadersmall{
     color: #fff;
-    font-size: 150px;
+    font-size: 50px;
     font-family: 'Indie Flower';
+    text-align: center;
 
 }
 

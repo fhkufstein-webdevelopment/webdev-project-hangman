@@ -9,8 +9,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/pics/favicon.ico">
 
 
     <?php if($this->current == "login"): ?>
@@ -21,6 +22,11 @@
     <link rel="stylesheet" href="css/login-microsite.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <script src="js/login.js">
+            <script type="text/javascript" src="js/toastr.min.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/core2.js"></script>
+
 
 
 
@@ -42,6 +48,8 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/core2.js"></script>
 
 
 
@@ -66,6 +74,8 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/login-microsite.css">
+    <link rel="stylesheet" href="css/body.css">
 
     <?php elseif ($this->current == "highscore"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
@@ -83,7 +93,6 @@
 
     <?php elseif ($this->current == "start"): ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
@@ -98,6 +107,8 @@
 
 
     <?php endif; ?>
+
+    <link rel="stylesheet" href="css/footer.css">
 
 
 
