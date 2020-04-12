@@ -20,6 +20,7 @@ echo $this->header;
 
                 <form class="col-12 form-input">
 
+                    <br>
                     <h1 class="col-xs-12 text-info">Login</h1>
                     <p class="col-xs-12 formularLink">
                         Hier kannst du dich anmelden.
@@ -36,7 +37,6 @@ echo $this->header;
                             </div>
                         <?php endif; ?>
 
-
                         <div class="form-group">
                             <input type="text" name="username" id="username" class="form-control" value="" placeholder="Benutzername">
                         </div>
@@ -44,8 +44,6 @@ echo $this->header;
                         <div class="form-group">
                             <input type="password" name="password" id="password" class="form-control" value="" placeholder="Passwort">
                         </div>
-
-
 
 
                         <button type="submit" class="btn btn-info">Anmelden</button>
@@ -59,7 +57,6 @@ echo $this->header;
                         <p class="col-xs-12 formularLink">
                             <a href="index" class="registerOverlay">Zurück zur Startseite</a>
                         </p>
-
                     </form>
 
             </div>
