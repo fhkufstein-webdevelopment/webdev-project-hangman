@@ -5,9 +5,9 @@
 /**
  * @author Daniel Hoover <https://github.com/danielhoover>
  */
-class HighscoreController extends Controller {
+//class HighscoreController extends Controller {
 
-
+/*
 	protected $viewFileName = "highscore"; //this will be the View that gets the data...
 	protected $loginRequired = true;
 
@@ -30,11 +30,11 @@ class HighscoreController extends Controller {
                 $this->view->highscore = null;
             }
         } */
-        $this->checkForSaveScorePost();
-    }
+   //     $this->checkForSaveScorePost();
+    //}
 
 
-    private function checkForSaveScorePost()
+ /*   private function checkForSaveScorePost()
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
