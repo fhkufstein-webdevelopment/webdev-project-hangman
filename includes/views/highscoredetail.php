@@ -4,27 +4,27 @@ echo $this->header;
 
 ?>
 
-<div id="main" class="userDetail"> <!-- Klassenänderung -->
+<div id="main" class="highscoreDetail"> <!-- Klassenänderung -->
 
     <?php if($this->user): ?> <!-- Änderung address in user -->
 
-        <h1><?php echo $this->user->firstname; ?>
+        <h1><?php echo $this->highscore->benutzername; ?>
 
-            <?php echo $this->user->lastname; ?></h1> <!-- Änderung address in user -->
-        <br>
+            <?php echo $this->highscore->time; ?></h1> <!-- Änderung address in user -->
 
-    <?php if($this->user->highscore != ''): ?>
 
-            <?php echo $this->user->highscore; ?>
+    <?php if($this->highscore->benutzer != ''): ?>
+
+            <?php echo $this->highscore->highscore; ?>
         </a>
-        <br>
+
 
 
         <?php endif; ?>
 
 
     <?php else: ?>
-        <h1>Ungültige Adresse!</h1>
+        <h1>Ungültige Adresse asdfghjk!</h1>
     <?php endif; ?>
 
 </div>

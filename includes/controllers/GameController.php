@@ -32,7 +32,7 @@ class GameController extends Controller
             $userid = $this->user->id;
 
             //now we need our Model to save the values
-            HighscoreModel::saveScoreAndAttempts($userid, $time); //Variablennamen von oben
+            GameModel::saveScoreAndAttempts($userid, $time); //Variablennamen von oben
 
             //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:

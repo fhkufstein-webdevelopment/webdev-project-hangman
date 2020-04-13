@@ -127,7 +127,7 @@ class Highscore extends RESTClass
 			}
 			else
 			{
-				HighscoreModel::saveHighscore($data);
+				AddressModel::saveHighscore($data);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;

@@ -1,6 +1,29 @@
 <?php
+// TODO: Variablennamen müssen noch überprüft und ausgebessert werden
+// TODO: eventuell muss noch eine Datenbank bei phpMyAdmin angelegt werden
+// hängt mit dem HighscoreController zusammen
+//macht im moment noch dasselbe wie GameModel, beide funktionieren aber nicht
 
 class HighscoreModel
+{
+
+    public static function saveScore($userid, $time)
+    {
+
+        $db = new Database();
+
+        //prevent SQL Injection:
+        $userid = $db->escapeString($userid);
+        $time = $db->escapeString($time);
+
+        /*$attempts = $db->escapeString($attempts);*/
+
+        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('" . $userid . "','" . $time . "')"; //,'".$attempts."'
+
+        $db->query($sql);
+    }
+}
+/*
 {
     public static function getHighscoreById($id)
     {
@@ -67,18 +90,18 @@ class HighscoreModel
         $db->query($sql);
     }
 
+*/
 
-
-    public static function saveScoreAndAttempts($benutzer, $time /*, $attempts*/)
+ /*   public static function saveScoreAndAttempts($benutzer, $time )
     {
         $db = new Database();
 
         //prevent SQL Injection:
         $benutzer = $db->escapeString($benutzer);
         $time = $db->escapeString($time);
-        /*$attempts = $db->escapeString($attempts);*/
+        /*$attempts = $db->escapeString($attempts);
 
-        $sql = "INSERT INTO highscore(`benutzer`,/*`attempts`,*/`time`) VALUES('".$benutzer."','".$time."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`benutzer`,`time`) VALUES('".$benutzer."','".$time."')"; //,'".$attempts."'
         $db->query($sql);
     }
-}
+}  */
