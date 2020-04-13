@@ -3,18 +3,33 @@
 echo $this->header;
 
 ?>
-    <div id="main" class="highscoreDetail">
-        <?php if($this->highscore): ?>
-            <h1><?php echo $this->highscore->benutzer; ?> <?php echo $this->highscore->time; ?></h1><br>
 
-            <?php if($this->address->email != ''): ?>
-        <a href="mailto:<?php echo $this->address->email; ?>" class="email"><?php echo $this->address->email; ?></a><br>
+<div id="main" class="userDetail"> <!-- Klassenänderung -->
+
+    <?php if($this->user): ?> <!-- Änderung address in user -->
+
+        <h1><?php echo $this->user->firstname; ?>
+
+            <?php echo $this->user->lastname; ?></h1> <!-- Änderung address in user -->
+        <br>
+
+    <?php if($this->user->highscore != ''): ?>
+
+            <?php echo $this->user->highscore; ?>
+        </a>
+        <br>
+
+
         <?php endif; ?>
-        <?php else: ?>
+
+
+    <?php else: ?>
         <h1>Ungültige Adresse!</h1>
-        <?php endif; ?>
+    <?php endif; ?>
 
-    </div>
+</div>
+
+
 <?php
 
 echo $this->footer;

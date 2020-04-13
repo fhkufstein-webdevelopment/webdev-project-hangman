@@ -157,7 +157,7 @@ function gameComplete(status, time) { // user und time für den highscore
     $.ajax({
         'url':    'game',
         'method': 'post',
-        'data':    {'action': 'saveHighscore', 'time': 'time'}, // zeit mit time ersetzt
+        'data':    {'action': 'saveScore', 'time': 'time'}, // zeit mit time ersetzt
         //'variablenname': phpMyAdmin-Spaltenname ? oder die funktion, weil wenn man es in diesen `` lässt und dann mit strg+b kommt man auf die Funktion..
         //und Savescore ist auch eine Funktion -> aber diese findet er nicht
 
