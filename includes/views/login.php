@@ -3,101 +3,92 @@
 echo $this->header;
 
 ?>
+<?php $thisSeite="login"; ?>
 
-
-
-    <body class="bodyhangman">
 
 
     <div class="modal-dialog text-center" >
-        <div class="col-sm-9 main-section" >
-            <div class="modal-content" >
+    <div class="col-sm-9 main-section" >
+    <div class="modal-content" >
 
-                <div class="col-12 user-img">
-                    <img src="pics/face.png">
-                </div>
-
-
-                <form class="col-12 form-input">
-
-                    <br>
-                    <h1 class="col-xs-12 text-info">Login</h1>
-                    <p class="col-xs-12 formularLink">
-                        Hier kannst du dich anmelden.
-                    </p>
-
-                    <form method="post" action="login" class="form-horizontal col-xs-12">
-                        <?php if($this->errorPasswd == true): ?>
-                            <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times</span>
-                                </button>
-                                <h4>Benutzername und/oder Passwort sind falsch</h4>
-                                <p>Prüfen Sie bitte ob Sie sich nicht vertippt haben und versuchen Sie es erneut!</p>
-                            </div>
-                        <?php endif; ?>
-
-                        <div class="form-group">
-                            <input type="text" name="username" id="username" class="form-control" value="" placeholder="Benutzername">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="password" name="password" id="password" class="form-control" value="" placeholder="Passwort">
-                        </div>
-
-
-                        <button type="submit" class="btn btn-info">Anmelden</button>
-                        <input type="hidden" name="action" value="login">
-
-                        <p class="col-xs-12 formularLink">
-                            Noch keinen Account?
-                            <a data-toggle="modal" data-target="#registerModal">Hier registrieren</a>
-
-                        </p>
-                        <p class="col-xs-12 formularLink">
-                            <a href="index" class="registerOverlay">Zurück zur Startseite</a>
-                        </p>
-                    </form>
-
-            </div>
+        <div class="col-12 user-img">
+            <img src="../pics/face.png">
         </div>
 
+
+
+        <div id="main">
+            <div class="row">
+
+
+                <h1 class="col-xs-12">Login</h1>
+                <p class="col-xs-12">
+                    Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
+                </p>
+
+                <form method="post" action="login" class="form-horizontal col-xs-12">
+                    <?php if($this->errorPasswd == true): ?>
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4>Benutzername und/oder Passwort sind falsch</h4>
+                            <p>Prüfen Sie bitte ob Sie sich nicht vertippt haben und versuchen Sie es erneut!</p>
+                        </div>
+                    <?php endif; ?>
+                    <div class="form-group">
+                        <label for="username" class="col-xs-12 col-md-2">Benutzername</label>
+                        <div class="col-xs-12 col-md-10">
+                            <input type="text" name="username" id="username" class="text form-control" value="" placeholder="Benutzername">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-xs-12 col-md-2">Passwort</label>
+                        <div class="col-xs-12 col-md-10">
+                            <input type="password" name="password" id="password" class="text form-control" value="" placeholder="Passwort">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default">Anmelden</button>
+                    <input type="hidden" name="action" value="login">
+                </form>
+            </div>
+        </div>
     </div>
+
 
     <div class="modal fade<?php if($registerError):?> in<?php endif; ?>" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span></button>
-                    <br>
-                    <h4 class="modal-title text-info" id="registerModalLabel">Neuer User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="registerModalLabel">Registrierung</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <p class="col-xs-12 formularLink">
-                            Hier kannst du dich registrieren
+                        <p class="col-xs-12">
+                            Wir benötigen folgende Angaben um Sie für unseren Dienst registrieren zu können:
                         </p>
 
                         <form method="post" action="login" class="col-xs-12">
 
                             <div class="form-group">
-
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Benutzernamen">
+                                <label for="name">Benutzername/Nickname:</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Benutzernamen eingeben">
                             </div>
 
                             <!-- E-Mail hinzugefügt -->
                             <div class="form-group">
-
-                                <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
+                                <label for="name">E-Mail:</label>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail eingeben">
                             </div>
 
                             <div class="form-group">
-
-                                <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Passwort (mind. 8 Zeichen)">
+                                <label for="pwd">Passwort (mindestens 8 Zeichen):</label>
+                                <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Bitte Passwort eingeben (mind. 8 Zeichen)">
                             </div>
                             <div class="form-group">
-
-                                <input type="password" name="pwd2" class="form-control" id="pwd2" placeholder="Passwort wiederholen">
+                                <label for="pwd2">Passwort (wiederholen):</label>
+                                <input type="password" name="pwd2" class="form-control" id="pwd2" placeholder="Bitte das Passwort wiederholen">
                             </div>
 
                             <input type="hidden" name="action" value="register">
@@ -113,9 +104,8 @@ echo $this->header;
         </div>
     </div>
     </div>
-
-
-    </body>
+    </div>
+</div>
 
 <?php
 

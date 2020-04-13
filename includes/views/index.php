@@ -2,12 +2,24 @@
     echo $this->header;
 ?>
 
+<?php $thisSeite="index"; ?>
+
 <section id="hero">
     <div id="hero-mask"></div>
     <header id="title-fade">
         <h1 class="text-center textheader">Hangflower</h1>
         <div class="text-center" >
             <a href="game"><button type="button" class="btn btn-info">Zum Game!</button></a>
+
+
+            <?php if(LOGGED_IN == true): ?>
+            <a href="game"><button type="button" class="btn btn-info">GAME</button></a>
+
+            <?php elseif(LOGGED_IN == false): ?>
+
+            <a href="login"><button type="button" class="btn btn-info">Login zum Game</button></a>
+            <?php endif; ?>
+
 
         </div>
 
@@ -42,15 +54,7 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="headerFade.js"></script>
 
-    <script type="text/javascript">
-        //initialize
-        $(document).ready(function() {
-            $('#hero').heroFade();
-        });
-    </script>
 
 
 

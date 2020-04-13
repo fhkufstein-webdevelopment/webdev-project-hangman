@@ -1,8 +1,8 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-.footer {
-    position: absolute;
+.footerstyle {
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
