@@ -26,7 +26,8 @@
     <?php elseif($this->current == "index"): ?>
         <link href="css/header.css" rel="stylesheet">
 
-
+    <?php elseif($this->current == "logout"): ?>
+        <link href="css/login-microsite.css" rel="stylesheet">
 
     <?php endif; ?>
 
@@ -136,7 +137,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="index" class="navbar-brand active">HangFlower</a>
+                        <a href="index" class="navbar-brand active" >HangFlower</a>
                     </div>
 
 

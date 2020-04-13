@@ -36,6 +36,8 @@ body {
     letter-spacing: 2px;
     padding-left: 54px;
 }
+
+/*
 .form-group::before {
     font-family: 'Font Awesome\ 5 Free';
     content: "\f1fa";
@@ -63,6 +65,8 @@ body {
     background-color: #13445e;
     border: 1px solid #daf1ff;
 }
+*/
+
 .formularLink {
     padding: 5px 0 25px;
     color: white;

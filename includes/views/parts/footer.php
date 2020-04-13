@@ -1,7 +1,8 @@
 
 
 <footer class="footerstyle">
-    <p class="text-center">&copy; HANGMAN <br>Alica - Chanelle - Julia - Katharina</p>
+    <h2 class="schriftlogo">&copy; Hangflower</h2>
+    <p class="text-center"> <br>Alica - Chanelle - Julia - Katharina</p>
 </footer>
 
 

@@ -9,23 +9,13 @@
     <header id="title-fade">
         <h1 class="text-center textheader">Hangflower</h1>
         <div class="text-center" >
-            <a href="game"><button type="button" class="btn btn-info">Zum Game!</button></a>
 
 
-            <?php if(LOGGED_IN == true): ?>
-            <a href="game"><button type="button" class="btn btn-info">GAME</button></a>
-
-            <?php elseif(LOGGED_IN == false): ?>
-
-            <a href="login"><button type="button" class="btn btn-info">Login zum Game</button></a>
-            <?php endif; ?>
-
+            <a href="login"><button type="button" class="btn btn-info">Zum Game!</button></a>
 
         </div>
-
     </header>
 </section>
-
 <div class="full-height" >
     <div class="container">
         <br>

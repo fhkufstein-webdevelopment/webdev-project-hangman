@@ -1,6 +1,7 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 .footerstyle {
     position: fixed;
     right: 0;
@@ -12,3 +13,13 @@
     font-family: 'Roboto', sans-serif;
     opacity: 50%;
 }
+
+.schriftlogo{
+
+    color: #000;
+    font-size: 2em;
+    font-family: 'Indie Flower';
+    text-align: center;
+
+}
+
