@@ -6,17 +6,17 @@
 
 class GameModel {
 
-    public static function saveScore ($userid, $time)
+    public static function saveScoreAndAttempts ($benutzer, $time)
     {
         $db = new Database();
 
         //prevent SQL Injection:
-        $userid = $db->escapeString($userid);
+        $benutzer = $db->escapeString($benutzer);
         $time = $db->escapeString($time);
 
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('".$userid."','".$time."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`benutzer`, `time`) VALUES('".$benutzer."','".$time."')"; //,'".$attempts."'
 
         $db->query($sql);
     }
