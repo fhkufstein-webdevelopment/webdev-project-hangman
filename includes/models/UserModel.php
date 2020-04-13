@@ -19,8 +19,8 @@ class UserModel
 		return null;
 	}
 
-	//warum ist funktionsname grau? alt: getAddressesByUserId
-	public static function getUsersByUserId($userId) //Backticks wegen Schlüsselwort?  (Änderung address mit user)
+
+	public static function getUserByUserId($userId) //Backticks wegen Schlüsselwort?  (Änderung address mit user)
 	{
 		$db = new Database();
 
@@ -70,7 +70,7 @@ class UserModel
 		return (object) $data;
 	}
 
-	public static function deleteUser($id) //warum ist diese funktion grau?
+	public static function deleteUser($id)
 	{
 		$db = new Database();
 

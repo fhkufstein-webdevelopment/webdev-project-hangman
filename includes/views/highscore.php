@@ -31,7 +31,10 @@ if ($_POST) {
 }
 */
 ?>
-
+<!-- hier müsste das Feld kommen, wo der highscore hineingespeichert wird
+ man bräuchte eine verbindng zu api
+<div class="row">
+    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/highscore/" class="col-xs-12"> -->
 
 <div class="highscore_table">
     <table class="table table-striped">

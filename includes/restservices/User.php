@@ -119,7 +119,7 @@ class User extends RESTClass
 
 		if(!$error)
 		{
-			$addressObj = AddressModel::getAddressById($data['id']);
+			$addressObj = UserModel::getUserById($data['id']);
 
 			if($addressObj->userId != $user->id)
 			{
@@ -161,7 +161,7 @@ class User extends RESTClass
 		}
 		else
 		{
-			$addressObj = AddressModel::getAddressById($data['id']);
+			$addressObj = UserModel::getUserById($data['id']);
 
 			if($addressObj->userId != $user->id)
 			{
@@ -172,7 +172,7 @@ class User extends RESTClass
 			}
 			else
 			{
-				AddressModel::deleteAddress($addressObj->id);
+				UserModel::deleteUser($addressObj->id);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;
