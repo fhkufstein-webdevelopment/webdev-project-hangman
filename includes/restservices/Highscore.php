@@ -1,6 +1,6 @@
 <?php
 
-class Highscore extends RESTClass
+/* class Highscore extends RESTClass
 {
 	private $Database = null;
 
@@ -22,7 +22,7 @@ class Highscore extends RESTClass
 
 			if(isset($data['id']))
 			{
-				$dataForView = HighscoreModel::getHighscoreById($data['id']);
+				$dataForView = GameModel::getHighscoreById($data['id']);
 				$user = new User();
 
 				if($dataForView->userId = $user->id)
@@ -78,7 +78,7 @@ class Highscore extends RESTClass
 		{
 			$data['userId'] = $user->id;
 
-			HighscoreModel::createNewHighscore($data);
+			GameModel::createNewHighscore($data);
 
 
 
@@ -116,7 +116,7 @@ class Highscore extends RESTClass
 
 		if(!$error)
 		{
-			$addressObj = HighscoreModel::getHighscoreById($data['id']);
+			$addressObj = GameModel::getHighscoreById($data['id']);
 
 			if($addressObj->userId != $user->id)
 			{
@@ -127,7 +127,7 @@ class Highscore extends RESTClass
 			}
 			else
 			{
-				AddressModel::saveHighscore($data);
+				GameModel::saveHighscore($data);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;
@@ -158,7 +158,7 @@ class Highscore extends RESTClass
 		}
 		else
 		{
-			$addressObj = HighscoreModel::getHighscoreById($data['id']);
+			$addressObj = GameModel::getHighscoreById($data['id']);
 
 			if($addressObj->userId != $user->id)
 			{
@@ -169,7 +169,7 @@ class Highscore extends RESTClass
 			}
 			else
 			{
-				HighscoreModel::deleteHighscore($addressObj->id);
+				GameModel::deleteHighscore($addressObj->id);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;

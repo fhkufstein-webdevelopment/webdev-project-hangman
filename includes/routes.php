@@ -28,8 +28,8 @@ $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueNam
 //neue Route für VCard
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
-//neue Route für Highscore
-$route['/highscore'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscoredetail');
+//neue Route für Highscore // dieser ist falsch
+$route['/highscore'] = array('controller' => 'highscoreController', 'uniqueName' => 'highscore');
 
 //neue Route für User
 $route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');

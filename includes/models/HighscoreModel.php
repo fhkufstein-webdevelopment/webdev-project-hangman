@@ -4,8 +4,8 @@
 // hängt mit dem HighscoreController zusammen
 //macht im moment noch dasselbe wie GameModel, beide funktionieren aber nicht
 
-class HighscoreModel
-{
+//class HighscoreModel
+ /*{
 
     public static function saveScore($userid, $time)
     {
@@ -18,11 +18,11 @@ class HighscoreModel
 
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('" . $userid . "','" . $time . "')"; //,'".$attempts."'
+      //  $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('" . $userid . "','" . $time . "')"; //,'".$attempts."'
 
-        $db->query($sql);
-    }
-}
+     //   $db->query($sql);
+   // }
+//}
 /*
 {
     public static function getHighscoreById($id)

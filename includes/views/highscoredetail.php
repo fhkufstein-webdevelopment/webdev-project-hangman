@@ -3,14 +3,15 @@
 echo $this->header;
 
 ?>
+<!--
 
 <div id="main" class="highscoreDetail"> <!-- Klassenänderung -->
 
-    <?php if($this->user): ?> <!-- Änderung address in user -->
+  /* <?php if($this->user): ?> <!-- Änderung address in user -->
 
-        <h1><?php echo $this->highscore->benutzername; ?>
+      <!--  <h1><?php echo $this->highscore->benutzername; ?>
 
-            <?php echo $this->highscore->time; ?></h1> <!-- Änderung address in user -->
+          <?php echo $this->highscore->time; ?></h1> <!-- Änderung address in user --> */
 
 
     <?php if($this->highscore->benutzer != ''): ?>
