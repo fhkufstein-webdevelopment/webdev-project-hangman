@@ -188,7 +188,6 @@ function gameFinished(userTime) {
     });
 } */
 
-//Läuft unser Spiel auf der Seite game mit einem GameController?
 
 
 

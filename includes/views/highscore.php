@@ -56,20 +56,17 @@ if ($_POST) {
         $datenbank = "webdev-project-hangman";
         $benutzer = "hangmangame";
         $pw = "12345Abc";
+        $connection = mysqli_connect($host, $benutzer, $pw, $datenbank); //liegt hier der Fehler?
 
-        $connection = mysqli_connect($host, $benutzer, $pw, $datenbank);
 
-
-        //$sql = "SELECT * FROM highscore ORDER BY punkte DESC";
-        // $ergebnis = mysqli_connect($connection, $sql);
         $sql = "SELECT * FROM highscore ORDER BY highscore DESC";
-        $ergebnis= mysqli_connect($connection, $sql);  //hier dürfte kein String stehen
+
+        $ergebnis = mysqli_connect($connection, $sql);  //hier dürfte kein String stehen
 
 
         $platz = 1;
 
-        while ($zeile = mysqli_fetch_assoc($ergebnis)) {  // hier sollte not null stehen
-
+        while ($zeile = mysqli_fetch_assoc($ergebnis)) {  // hier sollte not null stehen generell muss hier ein mysqli_result übergeben werden
             $userid= $zeile["userid"];#array
             $time = $zeile["time"];#array
             //$punkte = $zeile["time"];#array

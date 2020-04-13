@@ -28,11 +28,12 @@ $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueNam
 //neue Route für VCard
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
-//neue Route für Highscore // dieser ist falsch
+//neue Route für Highscore // dieser ist falsch -> warum? ich kann keinen Fehler finden...
 $route['/highscore'] = array('controller' => 'highscoreController', 'uniqueName' => 'highscore');
 
-//neue Route für User
-$route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');
+
+//neue Route für User -> bruachen wir doch gar nicht, oder?
+//$route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');
 
 //neue Route für Start
 $route['/start'] = array('controller' => 'StartController', 'uniqueName' => 'start');
