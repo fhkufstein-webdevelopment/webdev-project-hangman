@@ -83,12 +83,20 @@ class User extends Database
 		exit();
 	}
 
+    public function redirectToGame()
+    {
+        header('Location: '.GAME_URL);
+        header('Status: 303');
+        exit();
+    }
 
 
 
 
 
-	public function login($username, $password)
+
+
+    public function login($username, $password)
 	{
 		$sql = "SELECT `id`,`password` FROM `user` WHERE `name`='" . $this->escapeString($username) . "'";
 		$result = $this->query($sql);
