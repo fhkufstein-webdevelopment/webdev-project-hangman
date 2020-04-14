@@ -5,13 +5,15 @@ echo $this->header;
 // TODO: Auf Fehler kontrollieren z. B. Logo wird nicht angezeigt und Fußzeile wird nicht angezeigt
 
 //Datenbankverbindung
-/*
 $host = "localhost";
-$datenbank = "webdev-project-hangman";
-$benutzer = "hangmangame";
-$pw = "12345Abc";
+$name = "webdev-project-hangman"; //datenbank
+$user = "hangmangame"; //benutzer
+$pass = "12345Abc"; //pw
 
-$connection = mysqli_connect($host, $benutzer, $pw, $datenbank);
+//Verbindung erstellen
+$connection = mysqli_connect($host, $user, $pass, $name);
+echo "Highscore.php Zeile 15 - Connection: ";
+echo $connection;
 
 if (!$connection) {
     print "Keine Datenbankverbindung möglich. Ausgabe durch: highscore.php";
@@ -29,43 +31,32 @@ if ($_POST) {
     //Befehl der Datenbank übermitteln
     mysqli_query($connection, $sql);
 }
-*/
+
+
+
+
 ?>
+
 <!-- hier müsste das Feld kommen, wo der highscore hineingespeichert wird
- man bräuchte eine verbindng zu api
+ man bräuchte eine verbindng zu api -->
 <div class="row">
-    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/highscore/" class="col-xs-12"> -->
+    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/highscore/" class="col-xs-12">
 
 <div class="highscore_table">
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Zeit</th>
+           <!-- <th scope="col">#</th> -->
+            <th scope="col">Name / userid</th>
+            <th scope="col">Zeit / time</th>
             <!-- <th scope="col">Datum</th> -->
         </tr>
         </thead>
 
         <tbody>
 
-        <?php
 
-        //Datenbankverbindung
-        $host = "localhost";
-        $datenbank = "webdev-project-hangman";
-        $benutzer = "hangmangame";
-        $pw = "12345Abc";
-        $connection = mysqli_connect($host, $benutzer, $pw, $datenbank); //liegt hier der Fehler?
-
-
-        $sql = "SELECT * FROM highscore ORDER BY highscore DESC";
-
-        $ergebnis = mysqli_connect($connection, $sql);  //hier dürfte kein String stehen
-
-
-        $platz = 1;
-
+ <?php
         while ($zeile = mysqli_fetch_assoc($ergebnis)) {  // hier sollte not null stehen generell muss hier ein mysqli_result übergeben werden
             $userid= $zeile["userid"];#array
             $time = $zeile["time"];#array
@@ -81,7 +72,10 @@ if ($_POST) {
 
             $platz++; //damit rang immer erhöht wird
         }
-        ?>
+
+?>
+
+
         </tbody>
     </table>
 </div>

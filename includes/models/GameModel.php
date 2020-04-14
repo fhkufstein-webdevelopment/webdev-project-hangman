@@ -1,25 +1,25 @@
 <?php
 
-// TODO: Variablennamen müssen noch überprüft und ausgebessert werden
-// TODO: eventuell muss noch eine Datenbank bei phpMyAdmin angelegt werden
-// hängt mit dem GameController zusammen
+// TODO: richtigen Namen der Variable time einfügen (Zeile
 
 class GameModel {
 
-    public static function saveScoreAndAttempts ($benutzer, $time)
+    public static function saveScore ($id, $time)
     {
         $db = new Database();
 
         //prevent SQL Injection:
-        $benutzer = $db->escapeString($benutzer);
+        $id = $db->escapeString($id);
         $time = $db->escapeString($time);
 
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`benutzer`, `time`) VALUES('".$benutzer."','".$time."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('".$id."','".$time."')"; //,'".$attempts."'
 
         $db->query($sql);
     }
 
+
     //... and other awesome stuff in the GameModel that we are currently not interessted in...
+
 }

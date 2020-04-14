@@ -5,6 +5,12 @@
  */
 class HighscoreController extends Controller
 {
+    public function run()
+    {
+        // TODO: Implement run() method.
+    }
+
+    /*
 	protected $viewFileName = "highscore"; //this will be the View that gets the data...
 	protected $loginRequired = true;
 
@@ -17,18 +23,21 @@ class HighscoreController extends Controller
 		//$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id); //aus indexController wird hier nicht benötigt
         //$this->view->user = UserModel::getUserByUserId($this->user->id);
 		//$this->vies->highscore = HighscoreModel::getHighscoreByUserId($this->user->id);
+
+        //neu test:
+        $this->checkForSaveScorePost();
 	}
 
 	private function checkForSaveScorePost() {
 
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
-            $userid = $this->user->id;
+            $userid = $this->user->username; //hier username statt id?
             $time = $_POST['time'];
             //$attempts = $_POST['attempts'];
 
             //now we need our Model to save the values
-            GameModel::saveScoreAndAttempts($userid, $time); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
+            GameModel::saveScore($userid, $time); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:
             //$gameObj = new GameModel();
             //$gameObj->saveScoreAndAttempts($userid, $score, $attempts);
@@ -41,5 +50,5 @@ class HighscoreController extends Controller
             $jsonResponse->send();
         }
     }
-
+*/
 }

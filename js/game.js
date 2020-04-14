@@ -141,23 +141,30 @@ function switchFlower(changes) {
 }
 
 
-function gameComplete(status, time) { // user und time für den highscore
+function gameComplete(status) { // user und time für den highscore
     alphabetButtonStatus(true);
     startButton.disabled  = false;
     clearInterval(startTimer);
     if(status == true){
         alert("You won the Game");
+        //nur testweises Ausgeben
+        //alert(status);
+        //alert(time);
     }else {
         alert("You lost the Game");
+        //nur testweises Ausgeben
+        //alert(status);
+        //alert(time);
     }
     document.getElementById("startbutton").style.visibility = "hidden";
     document.getElementById("highscore").style.visibility = "visible";
+
 
     // Daten an den Highscore zu übergeben
     $.ajax({
         'url':    'game',
         'method': 'post',
-        'data':    {'action': 'saveScore', 'time': time}, // zeit mit time ersetzt
+        'data':    {'action': 'saveScore', 'time': time}, // Hier wird Variable übergeben, passt Variablenname?
         //'variablenname': phpMyAdmin-Spaltenname ? oder die funktion, weil wenn man es in diesen `` lässt und dann mit strg+b kommt man auf die Funktion..
         //und Savescore ist auch eine Funktion -> aber diese findet er nicht
 
@@ -169,31 +176,3 @@ function gameComplete(status, time) { // user und time für den highscore
         }
     });
 }
-/* könnte man löschen
-// TODO: Richtige Variablen für Funktion verwenden
-// Funktion für das Ende des Spiels (in etwa)
-function gameFinished(userTime) {
-    //keine Ahnung
-
-    $.ajax({
-        'url': 'game',
-        'method': 'post',
-        'data': {'action': 'saveScore', 'time': userTime},
-        'success': function (receivedData) {
-            if(receivedData.result) {
-                //after save change url to scorebord
-                location.href = '../html/highscore.html'; //Falsche Adresse bis jetzt
-            }
-        }
-    });
-} */
-
-
-
-
-
-
-
-
-
-
