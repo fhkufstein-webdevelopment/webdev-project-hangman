@@ -1,6 +1,6 @@
 <?php
 
-/* class Highscore extends RESTClass
+class Highscore extends RESTClass
 {
 	private $Database = null;
 
@@ -59,7 +59,7 @@
 
 	protected function createRequest($data)
 	{
-		$requiredFields = array('benutzer', 'time');
+		$requiredFields = array('userid', 'time');
 
 		$error = false;
 		$errorFields = array();
@@ -99,7 +99,7 @@
 
 	protected function saveRequest($data)
 	{
-		$requiredFields = array('benutzer', 'time');
+		$requiredFields = array('userid', 'time');
 
 		$error = false;
 		$errorFields = array();

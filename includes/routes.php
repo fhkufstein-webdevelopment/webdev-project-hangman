@@ -29,7 +29,7 @@ $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueNam
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
 //neue Route für Highscore // dieser ist falsch -> warum? ich kann keinen Fehler finden...
-$route['/highscore'] = array('controller' => 'highscoreController', 'uniqueName' => 'highscore');
+$route['/highscore'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscore');
 
 
 //neue Route für User -> bruachen wir doch gar nicht, oder?
