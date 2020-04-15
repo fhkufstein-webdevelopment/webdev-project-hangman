@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen 
         startAllItems();
     });
     highscoreButton.addEventListener("click", function(){
-        gameFinished(maxAmountOfTime);
+        gameComplete(maxAmountOfTime);
     })
 });
+
+
 let alphabet = "abcdefghijklmnopqrstuvwxyzäöü"
 function alphabetButtonStatus(status) {
     for(let i = 0; i< alphabet.length;i++){
@@ -38,9 +40,10 @@ function time(){
         gameComplete(false);
         maxAmountOfTime = 60;
         clearInterval(startTimer);
-
     }
 };
+
+
 function startAllItems() {
     startTimer;
     startButton.disabled = true;
@@ -149,7 +152,7 @@ function gameComplete(status) { // user und time für den highscore
         alert("You won the Game");
         //nur testweises Ausgeben
         //alert(status);
-        //alert(time);
+        alert(maxAmountOfTime);
     }else {
         alert("You lost the Game");
         //nur testweises Ausgeben
