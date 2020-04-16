@@ -11,7 +11,7 @@ echo $this->header;
 
     <!--  <h1><?php echo $this->highscore->benutzername; ?>
 
-          <?php echo $this->highscore->time; ?></h1> <!-- Änderung address in user --> */
+          <?php echo $this->highscore->maxAmountOfTime; ?></h1> <!-- Änderung address in user --> */
 
 
     <?php if($this->highscore->benutzer != ''): ?>

@@ -4,17 +4,17 @@
 
 class GameModel {
 
-    public static function saveScore ($id, $time)  // oder userid ??
+    public static function saveScore ($id, $maxAmountOfTime)  // oder userid ??
     {
         $db = new Database();
 
         //prevent SQL Injection:
         $id = $db->escapeString($id); // oder userid??
-        $time = $db->escapeString($time);
+        $maxAmountOfTime = $db->escapeString($maxAmountOfTime);
 
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`userid`, `time`) VALUES('".$id."','".$time."')"; //,'".$attempts."'
+        $sql = "INSERT INTO highscore(`userid`, `maxAmountOfTime`) VALUES('".$id."','".$maxAmountOfTime."')"; //,'".$attempts."'
 
         $db->query($sql);
     }
@@ -60,7 +60,7 @@ class GameModel {
     public static function createNewHighscore($data)
     {
         $db = new Database();
-        $sql = "INSERT INTO highscore(userid, time) VALUES('" . $db->escapeString($data['userid']) . "','" . $db->escapeString($data['time']) . "'";
+        $sql = "INSERT INTO highscore(userid, maxAmountOfTime) VALUES('" . $db->escapeString($data['userid']) . "','" . $db->escapeString($data['maxAmountOfTime']) . "'";
         $db->query($sql);
 
         $data['id'] = $db->insertId();
@@ -71,7 +71,7 @@ class GameModel {
     public static function saveHighscore($data)
     {
         $db = new Database();
-        $sql = "UPDATE highscore SET userid='" . $db->escapeString($data['userid']) . "',time='" . $db->escapeString($data['time']) . "' WHERE id=" . intval($data['id']);
+        $sql = "UPDATE highscore SET userid='" . $db->escapeString($data['userid']) . "',maxAmountOfTime='" . $db->escapeString($data['maxAmountOfTime']) . "' WHERE id=" . intval($data['id']);
         $db->query($sql);
 
         return (object)$data;

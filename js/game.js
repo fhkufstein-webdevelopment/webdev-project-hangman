@@ -167,7 +167,7 @@ function gameComplete(status) { // user und time für den highscore
     $.ajax({
         'url':    'game',
         'method': 'post',
-        'data':    {'action': 'saveScore', 'time': time}, // Hier wird Variable übergeben, passt Variablenname?
+        'data':    {'action': 'saveScore', 'time': maxAmountOfTime}, // Hier wird Variable übergeben, passt Variablenname?
         //'variablenname': phpMyAdmin-Spaltenname ? oder die funktion, weil wenn man es in diesen `` lässt und dann mit strg+b kommt man auf die Funktion..
         //und Savescore ist auch eine Funktion -> aber diese findet er nicht
 
