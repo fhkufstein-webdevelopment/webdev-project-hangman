@@ -38,3 +38,6 @@ $route['/highscore'] = array('controller' => 'HighscoreController', 'uniqueName'
 //neue Route für Start
 $route['/start'] = array('controller' => 'StartController', 'uniqueName' => 'start');
 
+// Highscoretest
+$route['/highscore1'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscoredetail');
+
