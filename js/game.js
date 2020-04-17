@@ -174,7 +174,7 @@ function gameComplete(status) { // user und time für den highscore
         'success': function(receivedData) {
             if(receivedData.result) {
                 //after save change url to scoreboard
-                location.href = 'highscore1';
+               // location.href = 'highscore1'; wenn dies auskommentiert ist, dann ist der highscorebutton klickbar, dieser wird aber nit richtig verlinkt...
             }
         }
     });
