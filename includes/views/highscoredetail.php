@@ -9,12 +9,12 @@ echo $this->header;
 
 /* <?php if($this->user): ?> <!-- Änderung address in user -->
 
-    <!--  <h1><?php echo $this->highscore->benutzername; ?>
+    <!--  <h1><?php echo $this->highscore->userid; ?>
 
           <?php echo $this->highscore->maxAmountOfTime; ?></h1> <!-- Änderung address in user --> */
 
 
-    <?php if($this->highscore->benutzer != ''): ?>
+    <?php if($this->highscore->userid != ''): ?>
 
         <?php echo $this->highscore->highscore; ?>
         </a>

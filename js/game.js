@@ -174,7 +174,7 @@ function gameComplete(status) { // user und time für den highscore
         'success': function(receivedData) {
             if(receivedData.result) {
                 //after save change url to scoreboard
-                location.href = 'highscore';
+                location.href = 'highscore1';
             }
         }
     });

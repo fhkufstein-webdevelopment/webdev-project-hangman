@@ -4,7 +4,7 @@
 
 class GameModel {
 
-    public static function saveScore ($id, $maxAmountOfTime)  // oder userid ??
+    public static function saveScore ($id, $maxAmountOfTime)  // oder userid oder saveScore
     {
         $db = new Database();
 

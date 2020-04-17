@@ -28,7 +28,7 @@ class GameController extends Controller
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
             $id = $this->user->id; //passt id?
-            $time = $_POST['maxAmountOfTime'];
+            $maxAmountOfTime = $_POST['maxAmountOfTime'];
 
             //Das Model soll die Werte speichern
             GameModel::saveScore($id, $maxAmountOfTime);
