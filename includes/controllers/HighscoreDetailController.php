@@ -11,11 +11,13 @@ class HighscoreDetailController extends Controller
 
 	public function run()
 	{
-		$this->view->title = "Highscoredetails";
-		$this->view->username = $this->user->username;
+		//$this->view->title = "Highscoredetails";
+		// $this->view->username = $this->user->username;
+        $this->view->highscore = GameModel::getHighscoreByUserId($this->user->id);
 
 
 
+/*
         if(isset($_GET['id']))
         {
             $id = $_GET['id'];
@@ -25,7 +27,7 @@ class HighscoreDetailController extends Controller
             {
                 $this->view->highscore = null;
             }
-        }
+        } */
     }
 
 
