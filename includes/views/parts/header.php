@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
-
+<header>
 <head>
+
 
     <title><?php echo $this->title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +65,7 @@
 
     <?php endif; ?>
 
-</head>
+</header>
 
 
 

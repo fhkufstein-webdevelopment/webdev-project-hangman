@@ -16,7 +16,7 @@ echo $this->header;
         <div>
             <!-- video tag hidden und dann visible-->
             <img src="pics/b_voll.png" id = "blume">
-            <video src="pics/logo.gif" id = "animation" type="video/mp4" autoplay></video>
+            <img src="pics/logo.gif" id = "animation"  >
         </div>
 
         <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>

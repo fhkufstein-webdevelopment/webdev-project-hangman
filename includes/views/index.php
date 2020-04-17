@@ -54,9 +54,8 @@
 
 </main>
 
-
+</body>
 
 <?php
     echo $this->footer;
 ?>
-</body>

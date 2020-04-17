@@ -18,10 +18,6 @@ echo $this->header;
 
 
 
-        <div id="main">
-            <div class="row">
-
-
                 <h1 class="col-xs-12 text-info">Login</h1>
                 <p class="col-xs-12 formularLink">
                    Hier kannst du dich für Hangflower anmelden
@@ -58,8 +54,8 @@ echo $this->header;
                     </p>
                 </form>
             </div>
-        </div>
-    </div>
+
+
 
 
     <div class="modal fade<?php if($registerError):?> in<?php endif; ?>" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
@@ -114,10 +110,11 @@ echo $this->header;
     </div>
 </div>
 </main>
+
+</body>
 <?php
 
 echo $this->footer;
 
 ?>
 
-</body>
