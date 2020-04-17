@@ -3,6 +3,8 @@
 echo $this->header;
 
 ?>
+
+<body class="hintergrund">
 <!--
 
 <div id="main" class="highscoreDetail"> <!-- Klassenänderung -->
@@ -36,3 +38,4 @@ echo $this->header;
 echo $this->footer;
 
 ?>
+</body>

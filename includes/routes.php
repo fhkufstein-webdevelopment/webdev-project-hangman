@@ -23,13 +23,20 @@ $route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'g
 //$route['//anmelden.html'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 
 //neue Route hinzufügen (für email)
-$route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
+//$route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
 
 //neue Route für VCard
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
 //neue Route für Highscore // dieser ist falsch -> warum? ich kann keinen Fehler finden...
-$route['/highscore'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscore');
+$route['/highscore'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
+$route['/highscoredetail.php'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
+
+$route['/userdetail'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');
+$route['/user.php'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');
+
+$route['/userchange'] = array('controller' => 'UserDatenController', 'uniqueName' => 'userchange');
+$route['/userdaten.php'] = array('controller' => 'UserDatenController', 'uniqueName' => 'userchange');
 
 
 //neue Route für User -> bruachen wir doch gar nicht, oder?

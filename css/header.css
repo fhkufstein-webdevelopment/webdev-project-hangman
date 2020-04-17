@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
-
+*{
+    margin: 0;
+    pading:0;
+}
 
 #hero {
     background-attachment: fixed;
@@ -11,6 +14,15 @@
     height: 100vh;
     width: 100%;
     margin-top: -20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.full-height {
+    height: 100vh;
+    background-color: #5bc0de;
+    color: black;
 }
 
 .textw{
@@ -24,6 +36,8 @@
      font-family: 'Indie Flower';
      text-align: center;
 
+
+
  }
 
 .textheadersmall{
@@ -34,6 +48,9 @@
 
 }
 
+
+
+/*
 .headerstart {
     z-index: 2;
     position: relative;
@@ -52,8 +69,6 @@
     opacity: 0;
     transform: translate3d(0, 0, 0);
 }
-.full-height {
-    height: 100vh;
-    background-color: #5bc0de;
-    color: black;
-}
+*/
+
+

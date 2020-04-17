@@ -1,12 +1,13 @@
+
 <?php
 
 echo $this->header;
 
 ?>
-<?php $thisSeite="login"; ?>
 
+<body class="hintergrund">
 
-
+<main>
     <div class="modal-dialog text-center" >
     <div class="col-sm-9 main-section" >
     <div class="modal-content" >
@@ -112,9 +113,11 @@ echo $this->header;
     </div>
     </div>
 </div>
-
+</main>
 <?php
 
 echo $this->footer;
 
 ?>
+
+</body>

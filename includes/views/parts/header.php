@@ -37,6 +37,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -103,13 +104,13 @@
 
                     </li>
 
-                    <li  <?php if ($this->current == "user") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
-                        <a class="nav-link" href="user">Userdaten <?php if ($this->current == "user"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
+                    <li  <?php if ($this->current == "userdetail") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
+                        <a class="nav-link" href="userdetail">Userdaten <?php if ($this->current == "userdetail"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
                     </li>
 
-                    <li  <?php if ($this->current == "adresse") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
-                        <a class="nav-link" href="adresse">Userdaten ändern <?php if ($this->current == "adresse"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
+                    <li  <?php if ($this->current == "userchange") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
+                        <a class="nav-link" href="userchange">Userdaten ändern <?php if ($this->current == "userchange"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
                     </li>
 

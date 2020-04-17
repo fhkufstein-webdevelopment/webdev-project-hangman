@@ -1,21 +1,28 @@
+
+
+
 <?php
     echo $this->header;
 ?>
 
-<?php $thisSeite="index"; ?>
+<body>
 
-<section id="hero">
-    <div id="hero-mask"></div>
-    <header id="title-fade">
-        <h1 class="text-center textheader">Hangflower</h1>
-        <div class="text-center" >
+<main>
+    <header id="hero">
+        <h1 class="text-center textheader">Hangflower<br>
+            <a href="login"><button type="button" class="btn btn-info">Game</button></a>
+        </h1>
 
 
-            <a href="login"><button type="button" class="btn btn-info">Zum Game!</button></a>
 
-        </div>
+
+
+
     </header>
-</section>
+
+
+
+
 <div class="full-height" >
     <div class="container">
         <br>
@@ -45,10 +52,11 @@
     </div>
 
 
-
+</main>
 
 
 
 <?php
     echo $this->footer;
 ?>
+</body>

@@ -16,7 +16,7 @@ echo $this->header;
         <div>
             <!-- video tag hidden und dann visible-->
             <img src="pics/b_voll.png" id = "blume">
-            <video src="pics/logo.mp4" id = "animation" type="video/mp4" autoplay></video>
+            <video src="pics/logo.gif" id = "animation" type="video/mp4" autoplay></video>
         </div>
 
         <button type="button" class="btn btn-primary btn-lg" id="startbutton">Game starten</button>
@@ -83,11 +83,13 @@ echo $this->header;
   für Highscore Tabelle -> ist villeicht richtig -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 
-</body>
+
 
 <?php
 
 echo $this->footer;
 
 ?>
+
+</body>
 
