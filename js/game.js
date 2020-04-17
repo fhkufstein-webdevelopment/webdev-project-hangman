@@ -6,6 +6,8 @@ let startButton;
 let startTimer;
 let maxAmountOfTime = 60;
 let highscoreButton;
+
+
 document.addEventListener("DOMContentLoaded",function () { //wenn alles geladen ist
     startButton = document.getElementById("startbutton");
     highscoreButton = document.getElementById("highscore");
@@ -28,6 +30,7 @@ function alphabetButtonStatus(status) {
         document.getElementById(currentButton).disabled = status;
     }
 }
+
 
 function time(){
     maxAmountOfTime--;
@@ -66,11 +69,14 @@ function checkIfComplete() {
         gameComplete(true);
     }
 }
+
+
 let letterCount = 0;
 let letterCountOld = 0;
 let flowerStatus = 5;
-
 var answer = [];
+
+
 function play(letter){
     let letterToDisable = "alphabet-" + letter;
     document.getElementById(letterToDisable).disabled = true;
@@ -103,6 +109,7 @@ function printWordsOut(){
         }
     }
 }
+
 
 function switchFlower(changes) {
     flowerStatus += changes;
@@ -144,20 +151,14 @@ function switchFlower(changes) {
 }
 
 
-function gameComplete(status) { // user und time für den highscore
+function gameComplete(status) { //
     alphabetButtonStatus(true);
     startButton.disabled  = false;
     clearInterval(startTimer);
     if(status == true){
         alert("You won the Game");
-        //nur testweises Ausgeben
-        //alert(status);
-        alert(maxAmountOfTime);
     }else {
         alert("You lost the Game");
-        //nur testweises Ausgeben
-        //alert(status);
-        //alert(time);
     }
     document.getElementById("startbutton").style.visibility = "hidden";
     document.getElementById("highscore").style.visibility = "visible";
