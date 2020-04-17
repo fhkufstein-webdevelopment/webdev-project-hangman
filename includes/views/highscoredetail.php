@@ -19,7 +19,7 @@ echo $this->header;
     <?php if($this->highscore->userid != ''): ?>
 
         <?php echo $this->highscore->highscore; ?>
-        </a>
+
 
 
 
@@ -30,12 +30,12 @@ echo $this->header;
     <h1>Ungültige Adresse asdfghjk!</h1>
 <?php endif; ?>
 
-</div>
 
 
+</body>
 <?php
 
 echo $this->footer;
 
 ?>
-</body>
+
