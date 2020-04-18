@@ -3,9 +3,10 @@
 // TODO: richtigen Namen der Variable time einfügen (Zeile
 
 
-class GameModel {
+class GameModel
+{
 
-    public static function saveScore ($id, $maxAmountOfTime)  // oder userid oder saveScore
+    public static function saveScore($id, $maxAmountOfTime)  // oder userid oder saveScore
     {
         $db = new Database();
 
@@ -15,7 +16,8 @@ class GameModel {
 
         /*$attempts = $db->escapeString($attempts);*/
 
-        $sql = "INSERT INTO highscore(`userid`, `maxAmountOfTime`) VALUES('".$id."','".$maxAmountOfTime."')"; //,'".$attempts."'
+        //funktioniert
+        $sql = "INSERT INTO highscore(`userid`, `maxAmountOfTime`) VALUES('" . $id . "','" . $maxAmountOfTime . "')";
 
         $db->query($sql);
     }
@@ -29,32 +31,32 @@ class GameModel {
 
         $db = new Database();
 
-        $sql = "SELECT *, `maxAmountOfTime` FROM highscore order by `maxAmountOfTime` desc";   //funktioniert
+        //funktioniert
+        //$sql = "SELECT *, `maxAmountOfTime` FROM highscore order by `maxAmountOfTime` desc";   //funktioniert
+
+        //Abfrage aus phpMyAdmin
+        $sql = "SELECT `highscore`.`userid`, `user`.`name`, `highscore`.`maxAmountOfTime`
+                FROM `highscore` as  `highscore`
+                JOIN `user` as `user`
+                    on `highscore`.`userid` = `user`.`id`
+                ORDER by `highscore`.`maxAmountOfTime` desc";
+
+
         $result = $db->query($sql);
 
         if ($db->numRows($result) > 0) {
-        $addressesArray = array();
 
-        while ($row = $db->fetchObject($result)) {
-        $addressesArray[] = $row;
-        }
+            $addressesArray = array();
 
-        return $addressesArray;
+            while ($row = $db->fetchObject($result)) {
+                $addressesArray[] = $row;
+            }
+
+            return $addressesArray;
         }
 
         return null;
-        }
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 
@@ -79,8 +81,6 @@ class GameModel {
               FROM `user` as a
               JOIN `highscore` as b
               ON a.`id` = b.`userid` "; * /
-
-
 
 
 
