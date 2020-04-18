@@ -11,10 +11,10 @@ class HighscoreDetailController extends Controller
 
 	public function run()
 	{
-		//$this->view->title = "Highscoredetails";
+		$this->view->title = "Highscoredetails";
 		// $this->view->username = $this->user->username;
-        $this->view->highscore = GameModel::getHighscoreByUserId($this->user->id);
-
+       // $this->view->highscore = GameModel::getHighscoreByUserId($this->user->id);
+        $this->view->highscore = GameModel::getHighscoreById();
 
 
 /*

@@ -38,6 +38,10 @@ if ($_POST) {
 
  <body class="hintergrund">
 
+ <div class="meldung">
+     <h1> Gratuliere, du hast gewonnen!</h1>
+ </div>
+
  <div class="container jumbotron container-fluid jumbotron" >
 <!-- hier müsste das Feld kommen, wo der highscore hineingespeichert wird
  man bräuchte eine verbindng zu api
@@ -51,8 +55,12 @@ if ($_POST) {
             <label  name="firstname" class="form-control" id="maxAmountOfTime" value="<?php echo $this->maxAmountOfTime; ?>"> </label>
         </div>
 -->
+
+
+
 <div class="row">
     <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/highscore/" class="col-xs-12"> <!-- aus adress -->
+
 
 
 
@@ -65,8 +73,9 @@ if ($_POST) {
                      <thead>
                         <tr>
                            <!-- <th scope="col">#</th> -->
-                            <th scope="col"><?php echo "Name / userid" ?></th>
-                            <th scope="col">Zeit / maxAmountOfTime</th>
+                            <th scope="col"><?php echo "Userid" ?></th>
+                            <th scope="col"><?php echo "Nickname" ?></th>
+                            <th scope="col">Zeit</th>
 
 
                             <!-- <th scope="col">Datum</th> -->
@@ -86,6 +95,8 @@ if ($_POST) {
 
                          <td><?php echo $highscore->userid; ?></td>
                          <td><?php echo $highscore->maxAmountOfTime; ?></td>
+                         <td><?php echo $user->name; ?></td>
+
                      </tr>
                      <?php endforeach; ?>
 
