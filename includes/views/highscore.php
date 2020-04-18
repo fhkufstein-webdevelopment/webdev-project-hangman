@@ -38,7 +38,7 @@ if ($_POST) {
 
  <body class="hintergrund">
 
- <div class="meldung">
+ <div class="text-center">
      <h1> Gratuliere, du hast gewonnen!</h1>
  </div>
 
