@@ -2,6 +2,7 @@
 
 // TODO: richtigen Namen der Variable time einfügen (Zeile 31, 34)
 
+
 class GameController extends Controller
 {
 

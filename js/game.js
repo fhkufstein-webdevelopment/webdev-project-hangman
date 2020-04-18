@@ -1,4 +1,3 @@
-
 var words = ['wort','hase', 'apfelbaum', 'baumhaus', 'birnenkuchen', 'albus', 'benzinmotor' ];
 var word = words[Math.floor(Math.random() * words.length)];
 

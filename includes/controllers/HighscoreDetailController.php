@@ -3,6 +3,7 @@
 /**
  * @author Daniel Hoover <https://github.com/danielhoover>
  */
+
 class HighscoreDetailController extends Controller
 {
 	protected $viewFileName = "highscore"; //this will be the View that gets the data...

@@ -2,6 +2,7 @@
 
 // TODO: richtigen Namen der Variable time einfügen (Zeile
 
+
 class GameModel {
 
     public static function saveScore ($id, $maxAmountOfTime)  // oder userid oder saveScore
