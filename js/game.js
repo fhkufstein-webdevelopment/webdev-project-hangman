@@ -1,5 +1,5 @@
 var words = ['wort','hase', 'apfelbaum', 'baumhaus', 'birnenkuchen', 'albus', 'benzinmotor' ];
-var word;
+var word = words[Math.floor(Math.random() * words.length)];
 
 let startButton;
 let startTimer;
@@ -77,7 +77,7 @@ var answer = [];
 
 
 function play(letter){
-    word = words[Math.floor(Math.random() * words.length)];
+    //word= words[Math.floor(Math.random() * words.length)];
     let letterToDisable = "alphabet-" + letter;
     document.getElementById(letterToDisable).disabled = true;
 

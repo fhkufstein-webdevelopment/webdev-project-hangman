@@ -94,8 +94,9 @@ if ($_POST) {
                      <tr>
 
                          <td><?php echo $highscore->userid; ?></td>
-                         <td><?php echo $highscore->maxAmountOfTime; ?></td>
                          <td><?php echo $user->name; ?></td>
+                         <td><?php echo $highscore->maxAmountOfTime; ?></td>
+
 
                      </tr>
                      <?php endforeach; ?>
