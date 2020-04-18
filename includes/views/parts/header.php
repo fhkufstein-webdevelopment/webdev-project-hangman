@@ -101,19 +101,11 @@
                     </li>
 
                     <li  <?php if ($this->current == "highscore") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
-                        <a class="nav-link" href="highscore">Highscore <?php if ($this->current == "highscore"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
+                        <a class="nav-link" href="highscore1">Highscore <?php if ($this->current == "highscore"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
                     </li>
 
-                    <li  <?php if ($this->current == "userdetail") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
-                        <a class="nav-link" href="userdetail">Userdaten <?php if ($this->current == "userdetail"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
-                    </li>
-
-                    <li  <?php if ($this->current == "userchange") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
-                        <a class="nav-link" href="userchange">Userdaten ändern <?php if ($this->current == "userchange"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
-
-                    </li>
 
 
 
