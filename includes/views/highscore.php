@@ -75,7 +75,7 @@ if ($_POST) {
                            <!-- <th scope="col">#</th> -->
                             <th scope="col"><?php echo "Userid" ?></th>
                             <th scope="col"><?php echo "Nickname" ?></th>
-                            <th scope="col">Zeit</th>
+                            <th scope="col"><?php echo "Zeit" ?></th>
 
 
                             <!-- <th scope="col">Datum</th> -->
