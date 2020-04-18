@@ -14,7 +14,6 @@ echo $this->header;
         <div id="countdown">01:00</div>
 
         <div>
-            <!-- video tag hidden und dann visible-->
             <img src="pics/b_voll.png" id = "blume">
             <img src="pics/logo.gif" id = "animation"  >
         </div>

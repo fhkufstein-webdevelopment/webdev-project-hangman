@@ -90,8 +90,10 @@ function play(letter){
     if(letterCountOld<letterCount){
         letterCountOld = letterCount;
         switchFlower(1);
+        document.getElementById("rightsound").play();
     }else {
         switchFlower(-1);
+        document.getElementById("failsound").play();
     }
 }
 
@@ -101,7 +103,7 @@ function printWordsOut(){
     document.getElementById("ausgabe").innerHTML = "";
     for(let i = 0; i < answer.length;i++){
         if(answer[i] == null){
-            document.getElementById("ausgabe").innerHTML += " ";
+            document.getElementById("ausgabe").innerHTML += "";
         }else{
             document.getElementById("ausgabe").innerHTML += answer[i];
             letterCount++;
@@ -157,6 +159,8 @@ function gameComplete(status) { //
     if(status == true){
        // alert("You won the Game");
 
+        document.getElementById("startbutton").style.visibility = "hidden";
+        document.getElementById("highscore").style.visibility = "visible";
 
         //Daten an den Highscore zu übergeben nur, wenn Spieler gewonnen hat
         $.ajax({
@@ -178,11 +182,13 @@ function gameComplete(status) { //
 
     }else {
         alert("You lost the Game");
-
+        document.getElementById("startbutton").innerHTML = "new Game";
+        flowerStatus = 5;
+        maxAmountOfTime = 60;
+        letterCountOld = 0;
+        letterCount = 0;
+        document.getElementById("ausgabe").innerHTML = "";
+        answer = [];
     }
-    document.getElementById("startbutton").style.visibility = "hidden";
-    document.getElementById("highscore").style.visibility = "visible";
-
-
 
 }
