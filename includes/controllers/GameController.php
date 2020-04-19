@@ -1,7 +1,5 @@
 <?php
 
-// TODO: richtigen Namen der Variable time einfügen (Zeile 31, 34)
-
 
 class GameController extends Controller
 {
@@ -16,7 +14,7 @@ class GameController extends Controller
     {
         // TODO: Implement run() method.
         $this->view->title = "game"; //oder "Game"
-        $this->view->username = $this->user->username;  //ist "username" richtig oder vl nur "name"?
+        $this->view->username = $this->user->username;
 
         //vielleicht noch andere Sachen
 
@@ -28,7 +26,7 @@ class GameController extends Controller
     {
         if(isset($_POST['action']) && $_POST['action'] == 'saveScore')
         {
-            $id = $this->user->id; //passt id?
+            $id = $this->user->id;
             $maxAmountOfTime = $_POST['maxAmountOfTime'];
 
             //Das Model soll die Werte speichern

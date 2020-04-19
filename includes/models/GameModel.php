@@ -1,20 +1,16 @@
 <?php
 
-// TODO: richtigen Namen der Variable time einfügen (Zeile
-
-
 class GameModel
 {
 
-    public static function saveScore($id, $maxAmountOfTime)  // oder userid oder saveScore
+    public static function saveScore($id, $maxAmountOfTime)
     {
         $db = new Database();
 
         //prevent SQL Injection:
-        $id = $db->escapeString($id); // oder userid??
+        $id = $db->escapeString($id);
         $maxAmountOfTime = $db->escapeString($maxAmountOfTime);
 
-        /*$attempts = $db->escapeString($attempts);*/
 
         //funktioniert
         $sql = "INSERT INTO highscore(`userid`, `maxAmountOfTime`) VALUES('" . $id . "','" . $maxAmountOfTime . "')";
@@ -34,7 +30,7 @@ class GameModel
         //funktioniert
         //$sql = "SELECT *, `maxAmountOfTime` FROM highscore order by `maxAmountOfTime` desc";   //funktioniert
 
-        //Abfrage aus phpMyAdmin
+        //Abfrage aus phpMyAdmin - Name wird in Highscoreübersicht nicht angezeigt
         $sql = "SELECT `highscore`.`userid`, `user`.`name`, `highscore`.`maxAmountOfTime`
                 FROM `highscore` as  `highscore`
                 JOIN `user` as `user`
@@ -59,11 +55,7 @@ class GameModel
     }
 
 
-
-
-
-
-/*
+/* Versuche, dass der Name auch angezeigt wird
     public static function getHighscoreByUserId($userId) //userid
     {
         $db = new Database();
@@ -114,7 +106,7 @@ class GameModel
     public static function saveHighscore($data)
     {
         $db = new Database();
-        $sql = "UPDATE highscore SET userid='" . $db->escapeString($data['userid']) . "', `nickname`='" . $db->escapeString($data['name']) . "',maxAmountOfTime='" . $db->escapeString($data['maxAmountOfTime']) . "' WHERE id=" . intval($data['id']);
+        $sql = "UPDATE highscore SET userid='" . $db->escapeString($data['userid']) . "', `name`='" . $db->escapeString($data['name']) . "',maxAmountOfTime='" . $db->escapeString($data['maxAmountOfTime']) . "' WHERE id=" . intval($data['id']);
         $db->query($sql);
 
         return (object)$data;
@@ -127,6 +119,4 @@ class GameModel
         $sql = "DELETE FROM highscore WHERE id=" . intval($id);
         $db->query($sql);
     }
-
-
 }

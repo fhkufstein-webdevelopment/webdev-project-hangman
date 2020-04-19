@@ -18,7 +18,7 @@ class HighscoreDetailController extends Controller
         $this->view->highscore = GameModel::getHighscoreById();
 
 
-/*
+        /*
         if(isset($_GET['id']))
         {
             $id = $_GET['id'];
@@ -30,11 +30,4 @@ class HighscoreDetailController extends Controller
             }
         } */
     }
-
-
-
-        //$this->view->user = UserModel::getUserByUserId($this->user->id);
-		//$this->vies->highscore = HighscoreModel::getHighscoreByUserId($this->user->id);
-
-
 }

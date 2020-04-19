@@ -1,7 +1,4 @@
 <?php
-// TODO: route für Highscore.html oder Highscore.php muss angelegt werden, vorher muss html oder php geklärt werden
-// TODO: weitere Routen anlegen?
-
 
 //define Routes
 $route['/'] = array('controller' => 'IndexController', 'uniqueName' => 'index');
@@ -19,8 +16,6 @@ $route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'g
 //$route['/html/game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
 
 
-
-
 //$route['/anmelden'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 //$route['//anmelden.html'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 
@@ -30,9 +25,9 @@ $route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'g
 //neue Route für VCard
 $route['/download'] = array('controller' => 'VCardDownloadController', 'uniqueName' => 'vcarddownload');
 
-//neue Route für Highscore // dieser ist falsch -> warum? ich kann keinen Fehler finden...
-$route['/highscore'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
-$route['/highscoredetail.php'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
+//alte Route für Highscore
+//$route['/highscore'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
+//$route['/highscoredetail.php'] = array('controller' => 'HighscoreDetailController', 'uniqueName' => 'highscore');
 
 $route['/userdetail'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');
 $route['/user.php'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');

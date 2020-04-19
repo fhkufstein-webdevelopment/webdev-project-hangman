@@ -1,4 +1,4 @@
-var words = ['wort','hase', 'apfelbaum', 'baumhaus', 'birnenkuchen', 'albus', 'benzinmotor' ];
+var words = ['wort','hase', 'apfelbaum', 'baumhaus', 'birnenkuchen', 'albus', 'benzinmotor', 'stecknadel' ];
 var word = words[Math.floor(Math.random() * words.length)];
 
 let startButton;
@@ -167,14 +167,12 @@ function gameComplete(status) { //
         $.ajax({
             'url':    'game',
             'method': 'post',
-            'data':    {'action': 'saveScore', 'maxAmountOfTime': maxAmountOfTime}, // Hier wird Variable übergeben, passt Variablenname?
-            //'variablenname': phpMyAdmin-Spaltenname ? oder die funktion, weil wenn man es in diesen `` lässt und dann mit strg+b kommt man auf die Funktion..
-            //und Savescore ist auch eine Funktion -> aber diese findet er nicht
+            'data':    {'action': 'saveScore', 'maxAmountOfTime': maxAmountOfTime},
 
             'success': function(receivedData) {
                 if(receivedData.result) {
                     //after save change url to scoreboard
-                    location.href = 'highscore1'; //wenn dies auskommentiert ist, dann ist der highscorebutton klickbar, dieser wird aber nit richtig verlinkt...
+                    location.href = 'highscore1'; //wenn dies auskommentiert ist, dann ist der highscorebutton klickbar, dieser wird aber ist richtig verlinkt...
                 }
             }
         });
