@@ -15,12 +15,12 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/body.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-
+    <link href="css/login-microsite.css" rel="stylesheet">
 
     <?php if($this->current == "login"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
-        <link href="css/login-microsite.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+
+
 
     <?php elseif($this->current == "game"): ?>
         <link href="css/game.css" rel="stylesheet">
@@ -28,8 +28,7 @@
     <?php elseif($this->current == "index"): ?>
         <link href="css/header.css" rel="stylesheet">
 
-    <?php elseif($this->current == "logout"): ?>
-        <link href="css/login-microsite.css" rel="stylesheet">
+
 
     <?php endif; ?>
 

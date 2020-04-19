@@ -35,9 +35,6 @@ $route['/highscoredetail.php'] = array('controller' => 'HighscoreDetailControlle
 $route['/userdetail'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');
 $route['/user.php'] = array('controller' => 'UserDetailController', 'uniqueName' => 'userdetail');
 
-$route['/userchange'] = array('controller' => 'UserDatenController', 'uniqueName' => 'userchange');
-$route['/userdaten.php'] = array('controller' => 'UserDatenController', 'uniqueName' => 'userchange');
-
 
 //neue Route für User -> bruachen wir doch gar nicht, oder?
 //$route['/user'] = array('controller' => 'UserDetailController', 'uniqueName' => 'user');

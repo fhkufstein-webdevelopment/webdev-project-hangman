@@ -39,7 +39,7 @@ if ($_POST) {
  <body class="hintergrund">
 
  <div class="text-center">
-     <h1> Gratuliere, du hast gewonnen!</h1>
+     <h1> Gratuliere <strong class="username"><?php echo $this->username; ?></strong>, du hast gewonnen!</h1>
  </div>
 
  <div class="container jumbotron container-fluid jumbotron" >
