@@ -3,8 +3,10 @@
 <header>
 <head>
 
-
+    <!-- Seitentitel wird automatisch angezeigt -->
     <title><?php echo $this->title; ?></title>
+
+    <!-- Allgemeine Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -17,6 +19,8 @@
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/login-microsite.css" rel="stylesheet">
 
+
+    <!-- Stylesheets nur für die aktuellen Seiten -->
     <?php if($this->current == "login"): ?>
         <link href="css/toastr.min.css" rel="stylesheet">
 
@@ -32,7 +36,7 @@
 
     <?php endif; ?>
 
-    <!--  <link href="css/main.css" rel="stylesheet">-->
+    <!--  Allgemeine .js Reihenfolge beachten-->
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -43,7 +47,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 
-
+    <!-- .js für bestimmte Seiten -->
 
     <?php if($this->current == "index"): ?>
         <script type="text/javascript" src="js/core.js"></script>
@@ -94,6 +98,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="navbar-nav">
 
+                    <!-- aktuelle Seite wird autom. als aktiv markiert -->
                     <li  <?php if ($this->current == "game") { echo ' class="nav-item active"';}  else  {echo ' class="nav-item"';}  ?>>
                         <a class="nav-link" href="game">Game <?php if ($this->current == "game"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
@@ -103,8 +108,6 @@
                         <a class="nav-link" href="highscore1">Highscore <?php if ($this->current == "highscore"){  echo ' <span class="sr-only">(current)</span>';}  ?></a>
 
                     </li>
-
-
 
 
 
@@ -123,7 +126,7 @@
 
     </nav>
 
-
+    <!-- Navi , wenn User nicht eingelogged-->
 <?php else: ?>
 
 

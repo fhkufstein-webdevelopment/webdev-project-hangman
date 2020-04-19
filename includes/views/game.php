@@ -4,7 +4,7 @@ echo $this->header;
 
 ?>
 
-
+<!-- Gameseite -->
 
 <body class="hintergrund">
 

@@ -19,6 +19,8 @@ $route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'g
 //$route['/html/game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
 
 
+
+
 //$route['/anmelden'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 //$route['//anmelden.html'] = array('controller' => 'AnmeldenController', 'uniqueName' => 'anmelden');
 

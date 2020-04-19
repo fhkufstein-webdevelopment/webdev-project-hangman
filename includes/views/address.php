@@ -6,10 +6,8 @@ echo $this->header;
 ?>
 
 <body class="bodyhangman">
-<div class="modal-dialog text-center" >
-    <div class="col-sm-9 main-section" >
-        <div class="modal-content" >
 
+<div class="container jumbotron container-fluid jumbotron"
 
 <div class="row">
 	<form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/address/" class="col-xs-12">

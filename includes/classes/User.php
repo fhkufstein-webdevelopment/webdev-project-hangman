@@ -83,6 +83,9 @@ class User extends Database
 		exit();
 	}
 
+
+	//Nach dem Login wird User zum Game weitergeleitet -km-
+
     public function redirectToGame()
     {
         header('Location: '.GAME_URL);

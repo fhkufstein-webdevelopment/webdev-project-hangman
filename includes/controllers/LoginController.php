@@ -34,7 +34,10 @@ class LoginController extends Controller
 			if($username != "" && $password != "")
 			{
 				if($this->user->login($username, $password))
+
+
 				{
+				    //Wenn Login passt, wird der Nutzer zur Gameseite weitergeleitet
 					$this->user->redirectToGame();
 				}
 				else
